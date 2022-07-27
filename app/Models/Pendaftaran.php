@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Pendaftaran extends Model
 {
     use HasFactory;
+
+    public function jurusan()
+    {
+        // data dari model 'Siswa' bisa memiliki 1 data
+        // dari model 'Wali' melalui id_siswa
+        return $this->belongsTo(Jurusan::class, 'id_jurusan');
+    }
 }

@@ -8,4 +8,21 @@ use Illuminate\Database\Eloquent\Model;
 class Galeri extends Model
 {
     use HasFactory;
+
+    public function image()
+    {
+        if ($this->foto && file_exists(public_path('images/galeri/' . $this->foto))) {
+            return asset('images/galeri/' . $this->foto);
+        } else {
+            return asset('images/no_image.jpg');
+        }
+    }
+
+    // mengahupus image(foto) di storage(penyimpanan) public
+    public function deleteImage()
+    {
+        if ($this->foto && file_exists(public_path('images/galeri/' . $this->foto))) {
+            return unlink(public_path('images/galeri/' . $this->foto));
+        }
+    }
 }
