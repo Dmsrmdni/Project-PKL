@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EskulController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,10 @@ Route::get('/', function () {
 Auth::routes(['register' => false]); // Mematikan halaman register
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
+    Route::get('/', function () {
+        return view('admin.index');
+    });
+    Route::resource('eskul', EskulController::class);
+});
