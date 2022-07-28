@@ -4494,10 +4494,8 @@
                         <!--begin::Menu item-->
                         <div class="menu-item px-5">
                             <li class="nav-item">
-                                <a class="nav-link menu-link px-5" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                                                                     document.getElementById('logout-form').submit();" role="button">Sign
-                                    Out</a>
+                                <a class="nav-link menu-link px-5" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();" role="button">Sign Out</a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>
