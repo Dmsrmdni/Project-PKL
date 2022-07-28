@@ -15,4 +15,9 @@ class Pendaftaran extends Model
         // dari model 'Wali' melalui id_siswa
         return $this->belongsTo(Jurusan::class, 'id_jurusan');
     }
+
+    public function laporan_pendaftaran()
+    {
+        return $this->hasone(Laporan_pendaftaran::class, 'id_laporan_pendaftaran');
+    }
 }
