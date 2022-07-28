@@ -45,6 +45,14 @@ License: For each use you must have a valid license purchased only from above li
     <!--begin::Global Stylesheets Bundle(used by all pages)-->
     <link href="{{asset('assets/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('assets/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
+
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('DataTables/datatables.min.css') }}">
+
     <!--end::Global Stylesheets Bundle-->
     <!--Begin::Google Tag Manager -->
     <script>
@@ -178,6 +186,18 @@ License: For each use you must have a valid license purchased only from above li
     <script src="{{asset('assets/js/custom/utilities/modals/users-search.js')}}"></script>
     <!--end::Custom Javascript-->
     <!--end::Javascript-->
+
+    <!-- Scripts -->
+    {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
+    <script src="{{ asset('js/jquery-3.5.1.js') }}"></script>
+    <script src="{{ asset('DataTables/datatables.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}" defer></script>
+    <script>
+        $(document).ready(function() {
+                $('#dataTable').DataTable();
+            });
+    </script>
+
 </body>
 <!--end::Body-->
 

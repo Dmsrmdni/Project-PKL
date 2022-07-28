@@ -130,7 +130,7 @@ class EskulController extends Controller
         $eskul->deleteImage();
         $eskul->delete();
         return redirect()
-            ->route('admin.eskul.index')
+            ->route('eskul.index')
             ->with('success', 'Data berhasil di Hapus!');
 
     }
