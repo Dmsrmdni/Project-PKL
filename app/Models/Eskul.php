@@ -11,8 +11,8 @@ class Eskul extends Model
 
     public function image()
     {
-        if ($this->image && file_exists(public_path('images/eskul/' . $this->image))) {
-            return asset('images/eskul/' . $this->image);
+        if ($this->foto && file_exists(public_path('images/eskul/' . $this->foto))) {
+            return asset('images/eskul/' . $this->foto);
         } else {
             return asset('images/no_image.jpg');
         }
@@ -21,8 +21,8 @@ class Eskul extends Model
     // mengahupus image(image) di storage(penyimpanan) public
     public function deleteImage()
     {
-        if ($this->image && file_exists(public_path('images/eskul/' . $this->image))) {
-            return unlink(public_path('images/eskul/' . $this->image));
+        if ($this->foto && file_exists(public_path('images/eskul/' . $this->foto))) {
+            return unlink(public_path('images/eskul/' . $this->foto));
         }
     }
 

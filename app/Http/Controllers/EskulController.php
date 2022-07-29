@@ -38,25 +38,25 @@ class EskulController extends Controller
     {
         //validasi
         $validated = $request->validate([
-            'nama_eskul' => 'required|unique:jurusans|max:255',
+            'nama_eskul' => 'required|unique:eskuls|max:255',
             'deskripsi' => 'required',
-            'image' => 'required',
+            'foto' => 'required',
         ]);
 
         $eskul = new Eskul();
         $eskul->nama_eskul = $request->nama_eskul;
         $eskul->deskripsi = $request->deskripsi;
-        if ($request->hasFile('image')) {
+        if ($request->hasFile('foto')) {
             $eskul->deleteImage(); //menghapus image sebelum di update melalui method deleteImage di model
-            $image = $request->file('image');
+            $image = $request->file('foto');
             $name = rand(1000, 9999) . $image->getClientOriginalName();
             $image->move('images/eskul/', $name);
-            $eskul->image = $name;
+            $eskul->foto = $name;
         }
 
-        $jurusan->save();
+        $eskul->save();
         return redirect()
-            ->route('jurusan.index')
+            ->route('eskul.index')
             ->with('success', 'Data berhasil di Buat!');
 
     }
@@ -98,23 +98,22 @@ class EskulController extends Controller
         $validated = $request->validate([
             'nama_eskul' => 'required',
             'deskripsi' => 'required',
-            'image' => 'required',
         ]);
 
         $eskul = Eskul::findOrFail($id);
         $eskul->nama_eskul = $request->nama_eskul;
         $eskul->deskripsi = $request->deskripsi;
-        if ($request->hasFile('image')) {
+        if ($request->hasFile('foto')) {
             $eskul->deleteImage(); //menghapus image sebelum di update melalui method deleteImage di model
-            $image = $request->file('image');
+            $image = $request->file('foto');
             $name = rand(1000, 9999) . $image->getClientOriginalName();
             $image->move('images/eskul/', $name);
-            $eskul->image = $name;
+            $eskul->foto = $name;
         }
 
         $eskul->save();
         return redirect()
-            ->route('admin.eskul.index')
+            ->route('eskul.index')
             ->with('success', 'Data berhasil di Edit!');
     }
 

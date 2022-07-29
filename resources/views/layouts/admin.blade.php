@@ -99,14 +99,12 @@ License: For each use you must have a valid license purchased only from above li
                             <!--begin::Toolbar container-->
                             <div id="kt_app_toolbar_container" class="app-container container-fluid d-flex flex-stack">
                                 <!--begin::Page title-->
-                                <!--end::Page title-->
+                                <div class="container-fluid">
+                                    @yield('content')
+                                </div>
                             </div>
                             <!--end::Toolbar container-->
                         </div>
-                        <!--end::Toolbar-->
-                        <!--begin::Content-->
-                        @yield('content')
-                        <!--end::Content-->
                     </div>
                     <!--end::Content wrapper-->
                     <!--begin::Footer-->
