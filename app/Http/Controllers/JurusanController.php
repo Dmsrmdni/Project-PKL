@@ -14,7 +14,8 @@ class JurusanController extends Controller
      */
     public function index()
     {
-        //
+        $jurusan = Jurusan::all();
+        return view('admin.jurusan.index', compact('jurusan'));
     }
 
     /**
@@ -24,7 +25,7 @@ class JurusanController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.jurusan.create');
     }
 
     /**
@@ -35,7 +36,30 @@ class JurusanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //validasi
+        $validated = $request->validate([
+            'nama_jurusan' => 'required|unique:jurusans|max:255',
+            'singkatan' => 'required',
+            'deskripsi' => 'required',
+            'foto' => 'required',
+        ]);
+
+        $jurusan = new Jurusan();
+        $jurusan->nama_jurusan = $request->nama_jurusan;
+        $jurusan->singkatan = $request->singkatan;
+        $jurusan->deskripsi = $request->deskripsi;
+        if ($request->hasFile('foto')) {
+            $jurusan->deleteImage(); //menghapus image sebelum di update melalui method deleteImage di model
+            $image = $request->file('foto');
+            $name = rand(1000, 9999) . $image->getClientOriginalName();
+            $image->move('images/jurusan/', $name);
+            $jurusan->foto = $name;
+        }
+        $jurusan->save();
+        return redirect()
+            ->route('jurusan.index')
+            ->with('success', 'Data berhasil di Buat!');
+
     }
 
     /**
@@ -44,9 +68,10 @@ class JurusanController extends Controller
      * @param  \App\Models\Jurusan  $jurusan
      * @return \Illuminate\Http\Response
      */
-    public function show(Jurusan $jurusan)
+    public function show($id)
     {
-        //
+        $jurusan = Jurusan::findOrFail($id);
+        return view('admin.jurusan.show', compact('jurusan'));
     }
 
     /**
@@ -55,9 +80,10 @@ class JurusanController extends Controller
      * @param  \App\Models\Jurusan  $jurusan
      * @return \Illuminate\Http\Response
      */
-    public function edit(Jurusan $jurusan)
+    public function edit($id)
     {
-        //
+        $jurusan = Jurusan::findOrFail($id);
+        return view('admin.jurusan.edit', compact('jurusan'));
     }
 
     /**
@@ -67,9 +93,31 @@ class JurusanController extends Controller
      * @param  \App\Models\Jurusan  $jurusan
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Jurusan $jurusan)
+    public function update(Request $request, $id)
     {
-        //
+        //validasi
+        $validated = $request->validate([
+            'nama_jurusan' => 'required',
+            'singkatan' => 'required',
+            'deskripsi' => 'required',
+        ]);
+
+        $jurusan = Jurusan::findOrFail($id);
+        $jurusan->nama_jurusan = $request->nama_jurusan;
+        $jurusan->singkatan = $request->singkatan;
+        $jurusan->deskripsi = $request->deskripsi;
+        if ($request->hasFile('foto')) {
+            $jurusan->deleteImage(); //menghapus image sebelum di update melalui method deleteImage di model
+            $image = $request->file('foto');
+            $name = rand(1000, 9999) . $image->getClientOriginalName();
+            $image->move('images/jurusan/', $name);
+            $jurusan->foto = $name;
+        }
+        $jurusan->save();
+
+        return redirect()
+            ->route('jurusan.index')
+            ->with('success', 'Data berhasil di Edit!');
     }
 
     /**
@@ -78,8 +126,14 @@ class JurusanController extends Controller
      * @param  \App\Models\Jurusan  $jurusan
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Jurusan $jurusan)
+    public function destroy($id)
     {
-        //
+        $jurusan = Jurusan::findOrFail($id);
+        $jurusan->deleteImage();
+        $jurusan->delete();
+        return redirect()
+            ->route('jurusan.index')
+            ->with('success', 'Data berhasil di Hapus!');
+
     }
 }

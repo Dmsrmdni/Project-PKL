@@ -5,9 +5,8 @@
 <div id="kt_app_content" class="app-content flex-column-fluid">
     <!--begin::Content container-->
     <div id="kt_app_content_container" class="app-container container-xxl">
-        <form class="form d-flex flex-column flex-lg-row" action="{{ route('eskul.store') }}" method="POST"
-            enctype="multipart/form-data">
-            @csrf
+        <form class="form d-flex flex-column flex-lg-row" action="{{ route('jurusan.update', $jurusan->id) }}"
+            method="POST" enctype="multipart/form-data">
             <!--begin::Aside column-->
             <div class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px mb-7 me-lg-10">
                 <!--begin::Thumbnail settings-->
@@ -40,7 +39,12 @@
                         <div class="image-input image-input-empty image-input-outline image-input-placeholder mb-3"
                             data-kt-image-input="true">
                             <!--begin::Preview existing avatar-->
-                            <div class="image-input-wrapper w-150px h-150px"></div>
+                            <div class="image-input-wrapper w-150px h-150px">
+                                @if (isset($jurusan) && $jurusan->foto)
+                                <img src="{{ asset('images/jurusan/' . $jurusan->foto) }}"
+                                    class="img-rounded img-responsive" style="width:150px; height:150px;" alt="">
+                                @endif
+                            </div>
                             <!--end::Preview existing avatar-->
                             <!--begin::Label-->
                             <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
@@ -49,13 +53,6 @@
                                 <i class="bi bi-pencil-fill fs-7"></i>
                                 <!--end::Icon-->
                                 <!--begin::Inputs-->
-                                <input type="file" class="form-control  @error('foto') is-invalid @enderror"
-                                    name="foto">
-                                @error('foto')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
                                 <!--end::Inputs-->
                             </label>
                             <!--end::Label-->
@@ -99,11 +96,11 @@
                     <div class="card-body pt-0">
                         <!--begin::Input group-->
                         <div class="mb-10 fv-row">
-                            <label class="required form-label">Name Eskul</label>
-                            <input type="text" name="nama_eskul"
-                                class="form-control mb-2  @error('nama_eskul') is-invalid @enderror"
-                                placeholder="Nama Eskul" value="" />
-                            @error('nama_eskul')
+                            <label class="required form-label">Name Jurusan</label>
+                            <input type="text" name="nama_jurusan"
+                                class="form-control mb-2  @error('nama_jurusan') is-invalid @enderror"
+                                value="{{ $jurusan->nama_jurusan }}" disabled />
+                            @error('nama_jurusan')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
@@ -111,10 +108,22 @@
                         </div>
 
                         <div class="mb-10 fv-row">
-                            <label class="required form-label">Deskripsi Eskul</label>
+                            <label class="required form-label">Name Singkatan</label>
+                            <input type="text" name="singkatan"
+                                class="form-control mb-2  @error('singkatan') is-invalid @enderror"
+                                value="{{ $jurusan->singkatan }}" disabled />
+                            @error('singkatan')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+
+                        <div class="mb-10 fv-row">
+                            <label class="required form-label">Deskripsi Jurusan</label>
                             <textarea name="deskripsi" cols="30" rows="7"
                                 class="form-control mb-2  @error('deskripsi') is-invalid @enderror"
-                                placeholder="Deskripsi Eskul"></textarea>
+                                disabled>{{$jurusan->deskripsi}}</textarea>
                             @error('deskripsi')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -130,14 +139,7 @@
                 <!--end::Automation-->
                 <div class="d-flex justify-content-end">
                     <!--begin::Button-->
-                    <a href="{{route('eskul.index')}}" class="btn btn-light me-5">Cancel</a>
-                    <!--end::Button-->
-                    <!--begin::Button-->
-                    <button type="submit" id="kt_ecommerce_add_category_submit" class="btn btn-primary">
-                        <span class="indicator-label">Save</span>
-                        <span class="indicator-progress">Please wait...
-                            <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-                    </button>
+                    <a href="{{route('jurusan.index')}}" class="btn btn-light me-5">kembali</a>
                     <!--end::Button-->
                 </div>
             </div>

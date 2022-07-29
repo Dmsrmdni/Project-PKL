@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nama_jurusan');
             $table->string('singkatan');
             $table->string('deskripsi');
-            $table->string('image');
+            $table->string('foto');
             $table->timestamps();
         });
     }

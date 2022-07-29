@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EskulController;
+use App\Http\Controllers\JurusanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,4 +28,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
         return view('admin.index');
     });
     Route::resource('eskul', EskulController::class);
+    Route::resource('jurusan', JurusanController::class);
+
 });
