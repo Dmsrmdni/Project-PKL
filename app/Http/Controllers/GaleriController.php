@@ -14,7 +14,8 @@ class GaleriController extends Controller
      */
     public function index()
     {
-        //
+        $galeri = Galeri::all();
+        return view('admin.galeri.index', compact('galeri'));
     }
 
     /**
@@ -24,7 +25,7 @@ class GaleriController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.galeri.create');
     }
 
     /**
@@ -35,7 +36,24 @@ class GaleriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //validasi
+        $validated = $request->validate([
+            'foto' => 'required|unique:galeris|max:255',
+        ]);
+
+        $galeri = new Galeri();
+        if ($request->hasFile('foto')) {
+            $galeri->deleteImage(); //menghapus image sebelum di update melalui method deleteImage di model
+            $image = $request->file('foto');
+            $name = rand(1000, 9999) . $image->getClientOriginalName();
+            $image->move('images/galeri/', $name);
+            $galeri->foto = $name;
+        }
+        $galeri->save();
+        return redirect()
+            ->route('galeri.index')
+            ->with('success', 'Data berhasil di Buat!');
+
     }
 
     /**
@@ -44,9 +62,10 @@ class GaleriController extends Controller
      * @param  \App\Models\Galeri  $galeri
      * @return \Illuminate\Http\Response
      */
-    public function show(Galeri $galeri)
+    public function show($id)
     {
-        //
+        $galeri = Galeri::findOrFail($id);
+        return view('admin.galeri.show', compact('galeri'));
     }
 
     /**
@@ -55,9 +74,10 @@ class GaleriController extends Controller
      * @param  \App\Models\Galeri  $galeri
      * @return \Illuminate\Http\Response
      */
-    public function edit(Galeri $galeri)
+    public function edit($id)
     {
-        //
+        $galeri = Galeri::findOrFail($id);
+        return view('admin.galeri.edit', compact('galeri'));
     }
 
     /**
@@ -67,9 +87,26 @@ class GaleriController extends Controller
      * @param  \App\Models\Galeri  $galeri
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Galeri $galeri)
+    public function update(Request $request, $id)
     {
-        //
+        //validasi
+        $validated = $request->validate([
+            'foto' => 'required',
+        ]);
+
+        $galeri = Galeri::findOrFail($id);
+        if ($request->hasFile('foto')) {
+            $galeri->deleteImage(); //menghapus image sebelum di update melalui method deleteImage di model
+            $image = $request->file('foto');
+            $name = rand(1000, 9999) . $image->getClientOriginalName();
+            $image->move('images/galeri/', $name);
+            $galeri->foto = $name;
+        }
+        $galeri->save();
+
+        return redirect()
+            ->route('galeri.index')
+            ->with('success', 'Data berhasil di Edit!');
     }
 
     /**
@@ -78,8 +115,14 @@ class GaleriController extends Controller
      * @param  \App\Models\Galeri  $galeri
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Galeri $galeri)
+    public function destroy($id)
     {
-        //
+        $galeri = Galeri::findOrFail($id);
+        $galeri->deleteImage();
+        $galeri->delete();
+        return redirect()
+            ->route('galeri.index')
+            ->with('success', 'Data berhasil di Hapus!');
+
     }
 }
