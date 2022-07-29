@@ -84,9 +84,18 @@
 
             </div>
             <!--end::Aside column-->
-            <!--begin::Main column-->
             <div class="d-flex flex-column flex-row-fluid gap-7 gap-lg-10">
-
+                <!--begin::General options-->
+                <div class="card card-flush py-4">
+                    <!--begin::Card header-->
+                    <div class="card-header">
+                        <div class="card-title">
+                            <h2>Data Galeri</h2>
+                        </div>
+                    </div>
+                    <!--end::Card header-->
+                </div>
+                <!--end::General options-->
                 <!--end::Automation-->
                 <div class="d-flex justify-content-end">
                     <!--begin::Button-->

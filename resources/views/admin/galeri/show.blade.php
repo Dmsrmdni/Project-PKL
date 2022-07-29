@@ -5,7 +5,7 @@
 <div id="kt_app_content" class="app-content flex-column-fluid">
     <!--begin::Content container-->
     <div id="kt_app_content_container" class="app-container container-xxl">
-        <form class="form d-flex flex-column flex-lg-row" action="{{ route('jurusan.update', $jurusan->id) }}"
+        <form class="form d-flex flex-column flex-lg-row" action="{{ route('galeri.update', $galeri->id) }}"
             method="POST" enctype="multipart/form-data">
             <!--begin::Aside column-->
             <div class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px mb-7 me-lg-10">
@@ -40,8 +40,8 @@
                             data-kt-image-input="true">
                             <!--begin::Preview existing avatar-->
                             <div class="image-input-wrapper w-150px h-150px">
-                                @if (isset($jurusan) && $jurusan->foto)
-                                <img src="{{ asset('images/jurusan/' . $jurusan->foto) }}"
+                                @if (isset($galeri) && $galeri->foto)
+                                <img src="{{ asset('images/galeri/' . $galeri->foto) }}"
                                     class="img-rounded img-responsive" style="width:150px; height:150px;" alt="">
                                 @endif
                             </div>
@@ -88,49 +88,8 @@
                     <!--begin::Card header-->
                     <div class="card-header">
                         <div class="card-title">
-                            <h2>Data</h2>
+                            <h2>Data Galeri</h2>
                         </div>
-                    </div>
-                    <!--end::Card header-->
-                    <!--begin::Card body-->
-                    <div class="card-body pt-0">
-                        <!--begin::Input group-->
-                        <div class="mb-10 fv-row">
-                            <label class="required form-label">Name Jurusan</label>
-                            <input type="text" name="nama_jurusan"
-                                class="form-control mb-2  @error('nama_jurusan') is-invalid @enderror"
-                                value="{{ $jurusan->nama_jurusan }}" disabled />
-                            @error('nama_jurusan')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </div>
-
-                        <div class="mb-10 fv-row">
-                            <label class="required form-label">Name Singkatan</label>
-                            <input type="text" name="singkatan"
-                                class="form-control mb-2  @error('singkatan') is-invalid @enderror"
-                                value="{{ $jurusan->singkatan }}" disabled />
-                            @error('singkatan')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </div>
-
-                        <div class="mb-10 fv-row">
-                            <label class="required form-label">Deskripsi Jurusan</label>
-                            <textarea name="deskripsi" cols="30" rows="7"
-                                class="form-control mb-2  @error('deskripsi') is-invalid @enderror"
-                                disabled>{{$jurusan->deskripsi}}</textarea>
-                            @error('deskripsi')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </div>
-                        <!--end::Input group-->
                     </div>
                     <!--end::Card header-->
                 </div>
@@ -139,7 +98,7 @@
                 <!--end::Automation-->
                 <div class="d-flex justify-content-end">
                     <!--begin::Button-->
-                    <a href="{{route('jurusan.index')}}" class="btn btn-light me-5">kembali</a>
+                    <a href="{{route('galeri.index')}}" class="btn btn-light me-5">kembali</a>
                     <!--end::Button-->
                 </div>
             </div>
