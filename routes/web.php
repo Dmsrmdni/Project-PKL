@@ -3,6 +3,7 @@
 use App\Http\Controllers\EskulController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\JurusanController;
+use App\Http\Controllers\PendaftaranController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,5 +32,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::resource('eskul', EskulController::class);
     Route::resource('jurusan', JurusanController::class);
     Route::resource('galeri', GaleriController::class);
+    Route::resource('pendaftaran', PendaftaranController::class);
 
 });

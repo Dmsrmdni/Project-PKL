@@ -56,6 +56,7 @@ class JurusanController extends Controller
             $jurusan->foto = $name;
         }
         $jurusan->save();
+        toast('berhasil input data', 'success');
         return redirect()
             ->route('jurusan.index')
             ->with('success', 'Data berhasil di Buat!');

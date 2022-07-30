@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
 Author: Keenthemes
-Product Name: Metronic - Bootstrap 5 HTML, VueJS, React, Angular, Asp.Net Core, Blazor, Django, Flask & Laravel Admin Dashboard Theme 
+Product Name: Metronic - Bootstrap 5 HTML, VueJS, React, Angular, Asp.Net Core, Blazor, Django, Flask & Laravel Admin Dashboard Theme
 Purchase: https://1.envato.market/EA4JP
 Website: http://www.keenthemes.com
 Contact: support@keenthemes.com
@@ -33,22 +33,35 @@ License: For each use you must have a valid license purchased only from above li
     <meta property="og:url" content="https://keenthemes.com/metronic" />
     <meta property="og:site_name" content="Keenthemes | Metronic" />
     <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
-    <link rel="shortcut icon" href="{{asset('assets/media/logos/favicon.ico')}}" />
+    <link rel="shortcut icon" href="{{ asset('assets/media/logos/favicon.ico') }}" />
     <!--begin::Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
     <!--end::Fonts-->
     <!--begin::Vendor Stylesheets(used by this page)-->
-    <link href="{{asset('assets/plugins/custom/fullcalendar/fullcalendar.bundle.css')}}" rel="stylesheet"
+    <link href="{{ asset('assets/plugins/custom/fullcalendar/fullcalendar.bundle.css') }}" rel="stylesheet"
         type="text/css" />
-    <link href="{{asset('assets/plugins/custom/datatables/datatables.bundle.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/plugins/custom/datatables/datatables.bundle.css') }}" rel="stylesheet"
+        type="text/css" />
     <!--end::Vendor Stylesheets-->
     <!--begin::Global Stylesheets Bundle(used by all pages)-->
-    <link href="{{asset('assets/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('assets/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
     <!--Begin::Google Tag Manager -->
     <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-5FS8GGP');
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&amp;l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5FS8GGP');
     </script>
     <!--End::Google Tag Manager -->
 </head>
@@ -61,7 +74,19 @@ License: For each use you must have a valid license purchased only from above li
     data-kt-app-sidebar-push-footer="true" data-kt-app-toolbar-enabled="true" class="app-default">
     <!--begin::Theme mode setup on page load-->
     <script>
-        if ( document.documentElement ) { const defaultThemeMode = "system"; const name = document.body.getAttribute("data-kt-name"); let themeMode = localStorage.getItem("kt_" + ( name !== null ? name + "_" : "" ) + "theme_mode_value"); if ( themeMode === null ) { if ( defaultThemeMode === "system" ) { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } else { themeMode = defaultThemeMode; } } document.documentElement.setAttribute("data-theme", themeMode); }
+        if (document.documentElement) {
+            const defaultThemeMode = "system";
+            const name = document.body.getAttribute("data-kt-name");
+            let themeMode = localStorage.getItem("kt_" + (name !== null ? name + "_" : "") + "theme_mode_value");
+            if (themeMode === null) {
+                if (defaultThemeMode === "system") {
+                    themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+                } else {
+                    themeMode = defaultThemeMode;
+                }
+            }
+            document.documentElement.setAttribute("data-theme", themeMode);
+        }
     </script>
     <!--end::Theme mode setup on page load-->
     <!--Begin::Google Tag Manager (noscript) -->
@@ -158,22 +183,23 @@ License: For each use you must have a valid license purchased only from above li
         var hostUrl = "assets/index.html";
     </script>
     <!--begin::Global Javascript Bundle(used by all pages)-->
-    <script src="{{asset('assets/plugins/global/plugins.bundle.js')}}"></script>
-    <script src="{{asset('assets/js/scripts.bundle.js')}}"></script>
+    <script src="{{ asset('assets/plugins/global/plugins.bundle.js') }}"></script>
+    <script src="{{ asset('assets/js/scripts.bundle.js') }}"></script>
     <!--end::Global Javascript Bundle-->
-    <!--begin::Vendors Javascript(used by this page)-->
-    <script src="{{asset('assets/plugins/custom/fullcalendar/fullcalendar.bundle.js')}}"></script>
-    <script src="{{asset('assets/plugins/custom/datatables/datatables.bundle.js')}}"></script>
+    <!--begin::Vendors Javascript(used by this page)-->*
+    <script src="{{ asset('assets/plugins/custom/fullcalendar/fullcalendar.bundle.js') }}"></script>
+    <script src="{{ asset('assets/plugins/custom/datatables/datatables.bundle.js') }}"></script>
     <!--end::Vendors Javascript-->
     <!--begin::Custom Javascript(used by this page)-->
-    <script src="{{asset('assets/js/widgets.bundle.js')}}"></script>
-    <script src="{{asset('assets/js/custom/widgets.js')}}"></script>
-    <script src="{{asset('assets/js/custom/apps/chat/chat.js')}}"></script>
-    <script src="{{asset('assets/js/custom/intro.js')}}"></script>
-    <script src="{{asset('assets/js/custom/utilities/modals/upgrade-plan.js')}}"></script>
-    <script src="{{asset('assets/js/custom/utilities/modals/create-app.js')}}"></script>
-    <script src="{{asset('assets/js/custom/utilities/modals/new-target.js')}}"></script>
-    <script src="{{asset('assets/js/custom/utilities/modals/users-search.js')}}"></script>
+    <script src="{{ asset('assets/js/widgets.bundle.js') }}"></script>
+    <script src="{{ asset('assets/js/custom/widgets.js') }}"></script>
+    <script src="{{ asset('assets/js/custom/apps/chat/chat.js') }}"></script>
+    <script src="{{ asset('assets/js/custom/intro.js') }}"></script>
+    <script src="{{ asset('assets/js/custom/utilities/modals/upgrade-plan.js') }}"></script>
+    <script src="{{ asset('assets/js/custom/utilities/modals/create-app.js') }}"></script>
+    <script src="{{ asset('assets/js/custom/utilities/modals/new-target.js') }}"></script>
+    <script src="{{ asset('assets/js/custom/utilities/modals/users-search.js') }}"></script>
+    @include('sweetalert::alert')
     <!--end::Custom Javascript-->
     <!--end::Javascript-->
 
