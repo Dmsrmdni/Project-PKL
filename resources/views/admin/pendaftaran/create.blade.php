@@ -24,13 +24,8 @@
                         <div class="mb-10 fv-row">
                             <label class="required form-label">Kode Pendaftaran</label>
                             <input type="text" name="kode_pendaftaran"
-                                class="form-control mb-2  @error('kode_pendaftaran') is-invalid @enderror"
-                                placeholder="Kode Pendaftaran" value="" />
-                            @error('kode_pendaftaran')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
+                                class="form-control mb-2  @error('kode_pendaftaran') is-invalid @enderror" readonly
+                                value="{{'NBM-'. date('dmy') . $kd}}" />
                         </div>
 
                         <div class="mb-10 fv-row">

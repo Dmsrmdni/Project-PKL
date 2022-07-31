@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Jurusan;
 use App\Models\Pendaftaran;
+use DB;
 use Illuminate\Http\Request;
 
 class PendaftaranController extends Controller
@@ -26,13 +27,23 @@ class PendaftaranController extends Controller
     public function create()
     {
         $jurusan = Jurusan::all();
-        return view('admin.pendaftaran.create', compact('jurusan'));
+        $q = DB::table('pendaftarans')->select(DB::raw('MAX(RIGHT(kode_pendaftaran,3)) as kode'));
+        $kd = "";
+        if ($q->count() > 0) {
+            foreach ($q->get() as $k) {
+                $tmp = ((int) $k->kode) + 1;
+                $kd = sprintf("%03s", $tmp);
+            }
+        } else {
+            $kd = "001";
+        }
+
+        return view('admin.pendaftaran.create', compact('jurusan', 'kd'));
     }
 
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'kode_pendaftaran' => 'required',
             'id_jurusan' => 'required',
             'nama_lengkap' => 'required',
             'jenis_kelamin' => 'required',
