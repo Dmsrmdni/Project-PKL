@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Laporan_pendaftaran;
+use App\Models\Pendaftaran;
 use Illuminate\Http\Request;
 
 class LaporanPendaftaranController extends Controller
@@ -14,7 +15,8 @@ class LaporanPendaftaranController extends Controller
      */
     public function index()
     {
-        //
+        $laporan_pendaftaran = Laporan_pendaftaran::withCount(['pendaftaran'])->get();
+        return view('admin.laporan_pendaftaran.index', compact('laporan_pendaftaran'));
     }
 
     /**

@@ -3,6 +3,7 @@
 use App\Http\Controllers\EskulController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\JurusanController;
+use App\Http\Controllers\LaporanPendaftaranController;
 use App\Http\Controllers\PendaftaranController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,8 +18,12 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('beranda');
 });
 
 Auth::routes(['register' => false]); // Mematikan halaman register
@@ -33,5 +38,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::resource('jurusan', JurusanController::class);
     Route::resource('galeri', GaleriController::class);
     Route::resource('pendaftaran', PendaftaranController::class);
+    Route::resource('laporan_pendaftaran', LaporanPendaftaranController::class);
 
 });

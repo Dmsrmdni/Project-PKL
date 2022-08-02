@@ -13,4 +13,11 @@ class Laporan_pendaftaran extends Model
     {
         return $this->belongsTo(Pendaftaran::class, 'id_pendaftaran');
     }
+
+    public function jurusan()
+    {
+        // data dari model 'Siswa' bisa memiliki 1 data
+        // dari model 'Wali' melalui id_siswa
+        return $this->belongsTo(Jurusan::class, 'id_jurusan');
+    }
 }

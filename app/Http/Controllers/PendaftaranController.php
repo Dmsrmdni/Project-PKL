@@ -84,7 +84,6 @@ class PendaftaranController extends Controller
         $pendaftaran->pekerjaan = $request->pekerjaan;
         $pendaftaran->no_hp_yang_bisa_di_hubungi = $request->no_hp_yang_bisa_di_hubungi;
         $pendaftaran->alamat_ortu = $request->alamat_ortu;
-
         $pendaftaran->save();
         return redirect()
             ->route('pendaftaran.index')

@@ -18,6 +18,6 @@ class Pendaftaran extends Model
 
     public function laporan_pendaftaran()
     {
-        return $this->hasone(Laporan_pendaftaran::class, 'id_laporan_pendaftaran');
+        return $this->hasMany(Laporan_pendaftaran::class, 'id_laporan_pendaftaran');
     }
 }

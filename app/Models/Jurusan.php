@@ -13,7 +13,14 @@ class Jurusan extends Model
     {
         // data dari model 'jurusan' bisa memiliki banyak data
         // dari model 'Pendaftaran' melalui id_pendaftaran
-        return $this->hasMany(Pendaftaran::class, 'id_guru');
+        return $this->hasMany(Pendaftaran::class, 'id_pendaftaran');
+    }
+
+    public function laporan_pendaftaran()
+    {
+        // data dari model 'jurusan' bisa memiliki banyak data
+        // dari model 'Pendaftaran' melalui id_pendaftaran
+        return $this->hasMany(Laporan_pendaftaran::class, 'id_pendaftaran');
     }
 
     public function image()
