@@ -286,9 +286,4 @@
             </div>
     </form>
 </div>
-
-
-
-
-
 @endsection
