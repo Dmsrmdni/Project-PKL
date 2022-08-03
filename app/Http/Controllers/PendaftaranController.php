@@ -93,7 +93,9 @@ class PendaftaranController extends Controller
     public function show($id)
     {
         $pendaftaran = Pendaftaran::findOrFail($id);
-        return view('admin.pendaftaran.show', compact('pendaftaran'));
+        $jurusan = Jurusan::all();
+
+        return view('admin.pendaftaran.show', compact('pendaftaran', 'jurusan'));
     }
 
     public function edit($id)
