@@ -1,5 +1,7 @@
 @extends('layouts.admin')
 
+<link href="{{asset('assets/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
+
 @section('content')
 <!--begin::Content-->
 <div id="kt_app_content" class="app-content flex-column-fluid">
@@ -10,7 +12,7 @@
             @csrf
             @method('put')
             <!--begin::Aside column-->
-            <div class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px mb-7 me-lg-10">
+            <div class="d-flex flex-column gap-7 gap-lg-10 w-8 w-lg-300px mb-7 me-lg-10">
                 <!--begin::Thumbnail settings-->
                 <div class="card card-flush py-4">
                     <!--begin::Card header-->

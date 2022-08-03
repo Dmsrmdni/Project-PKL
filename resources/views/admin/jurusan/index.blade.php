@@ -1,42 +1,27 @@
 @extends('layouts.admin')
 @section('content')
-<!--begin::Category-->
-<div class="card card-flush">
-    <!--begin::Card header-->
-    <div class="card-header align-items-center py-5 gap-2 gap-md-5">
-        <!--begin::Card title-->
-        <div class="card-title">
-        </div>
-        <!--end::Card title-->
-        <!--begin::Card toolbar-->
-        <div class="card-toolbar">
-            <!--begin::Add customer-->
-            <a href="{{ route('jurusan.create') }}" class="btn btn-primary">Tambah Data</a>
-            <!--end::Add customer-->
-        </div>
-        <!--end::Card toolbar-->
+
+<div class="card">
+    <div class="card-header">
+        @include('sweetalert::alert')
+        <a href="{{ route('jurusan.create') }}" class="btn btn-sm btn-primary"><svg xmlns="http://www.w3.org/2000/svg"
+                width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+            </svg>Tambah Data</a>
     </div>
-    <!--end::Card header-->
-    <!--begin::Card body-->
-    <div class="card-body pt-0">
-        <!--begin::Table-->
-        <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_ecommerce_category_table">
-            <!--begin::Table head-->
+    <div class="table-responsive text-nowrap">
+        <table class="table table-hover">
             <thead>
-                <!--begin::Table row-->
-                <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
-                    <th class="min-w-50px">NO</th>
-                    <th class="min-w-150px">Nama Jurusan</th>
-                    <th class="min-w-150px">Singkatan</th>
-                    <th class="min-w-150px">Deskripsi</th>
-                    <th class="min-w-150px">Foto</th>
-                    <th class="min-w-110px">Actions</th>
+                <tr>
+                    <th>NO</th>
+                    <th>Nama Jurusan</th>
+                    <th>Singkatan</th>
+                    <th>Foto</th>
+                    <th>Actions</th>
                 </tr>
-                <!--end::Table row-->
             </thead>
-            <!--end::Table head-->
-            <!--begin::Table body-->
-            <tbody class="fw-semibold text-gray-600">
+            <tbody class="table-border-bottom-0">
                 @php $no = 1; @endphp
                 @foreach ($jurusan as $data)
                 <tr>
@@ -62,69 +47,48 @@
                     <td>
                         <div class="d-flex">
                             <!--begin::Thumbnail-->
-                            {{ $data->deskripsi}}
-                        </div>
-                    </td>
-
-                    <td>
-                        <div class="d-flex">
-                            <!--begin::Thumbnail-->
                             <img src="{{ $data->image() }}" style="width: 100px; height:100px;" alt="">
                         </div>
                     </td>
 
-
                     <!--end::Type=-->
                     <!--begin::Action=-->
-                    <td class="d-flex">
-                        <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click"
-                            data-kt-menu-placement="bottom-end">Actions
-                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
-                            <span class="svg-icon svg-icon-5 m-0">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                    <td>
+                        <form action="{{ route('jurusan.destroy', $data->id) }}" method="post">
+                            @csrf
+                            @method('delete')
+                            <a href="{{ route('jurusan.edit', $data->id) }}" class="btn btn-sm btn-success">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-pencil-fill" viewBox="0 0 16 16">
                                     <path
-                                        d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z"
-                                        fill="currentColor" />
+                                        d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
                                 </svg>
-                            </span>
-                            <!--end::Svg Icon-->
-                        </a>
-                        <!--begin::Menu-->
-                        <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
-                            data-kt-menu="true">
-                            <!--begin::Menu item-->
-                            <form action="{{ route('jurusan.destroy', $data->id) }}" method="post">
-                                @csrf
-                                @method('delete')
-                                <div class="menu-item px-3">
-                                    <a href="{{ route('jurusan.edit', $data->id) }}" class=" menu-link px-3">Edit</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                    <a href="{{ route('jurusan.show', $data->id) }}" class=" menu-link px-3"
-                                        data-kt-ecommerce-category-filter="delete_row">show</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <div class="menu-item px-3">
-                                    <button type="submit" class="btn-danger"><a class=" menu-link px-3"
-                                            data-kt-ecommerce-category-filter="delete_row"
-                                            onclick="return confirm('Apakah Anda Yakin?')">Delete</a>
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                        <!--end::Menu-->
+                                Edit
+                            </a> |
+                            <a href="{{ route('jurusan.show', $data->id) }}" class="btn btn-sm btn-warning"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                    <path
+                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                                </svg>
+                                Lihat
+                            </a> |
+                            <button type="submit" class="btn btn-sm btn-danger"
+                                onclick="return confirm('Apakah Anda Yakin?')"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-trash-fill"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                                </svg> Hapus
+                            </button>
+                        </form>
                     </td>
-                    <!--end::Action=-->
                 </tr>
                 @endforeach
                 <!--end::Table row-->
+            </tbody>
         </table>
-        <!--end::Table-->
     </div>
-    <!--end::Card body-->
 </div>
-<!--end::Category-->
 @endsection

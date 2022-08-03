@@ -1,5 +1,7 @@
 @extends('layouts.admin')
 
+<link href="{{asset('assets/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
+
 @section('content')
 <!--begin::Content-->
 <div id="kt_app_content" class="app-content flex-column-fluid">
@@ -9,14 +11,14 @@
             enctype="multipart/form-data">
             @csrf
             <!--begin::Aside column-->
-            <div class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px mb-7 me-lg-10">
+            <div class="d-flex flex-column gap-7 gap-lg-10 w-5 w-lg-300px mb-7 me-lg-10">
                 <!--begin::Thumbnail settings-->
                 <div class="card card-flush py-4">
                     <!--begin::Card header-->
                     <div class="card-header">
                         <!--begin::Card title-->
                         <div class="card-title">
-                            <h2>Image</h2>
+                            <h2>Masukan Foto</h2>
                         </div>
                         <!--end::Card title-->
                     </div>
@@ -141,10 +143,7 @@
 
                 <!--end::Automation-->
                 <div class="d-flex justify-content-end">
-                    <!--begin::Button-->
-                    <a href="{{route('jurusan.index')}}" class="btn btn-light me-5">Cancel</a>
-                    <!--end::Button-->
-                    <!--begin::Button-->
+                    <a href="{{route('jurusan.index')}}" class="btn btn-danger me-3">Cancel</a>
                     <button type="submit" id="kt_ecommerce_add_category_submit" class="btn btn-primary">
                         <span class="indicator-label">Save</span>
                         <span class="indicator-progress">Please wait...

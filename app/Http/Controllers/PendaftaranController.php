@@ -156,7 +156,6 @@ class PendaftaranController extends Controller
     public function destroy($id)
     {
         $pendaftaran = Pendaftaran::findOrFail($id);
-        $pendaftaran->deleteImage();
         $pendaftaran->delete();
         return redirect()
             ->route('pendaftaran.index')
