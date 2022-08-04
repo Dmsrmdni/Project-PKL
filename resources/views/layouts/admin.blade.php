@@ -168,7 +168,7 @@
     <script src="{{asset('assets/js/dashboards-analytics.js')}}"></script>
 
     <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js')}}"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 
     <script>
         if (document.documentElement) { const defaultThemeMode = "system"; const name = document.body.getAttribute("data-kt-name"); let themeMode = localStorage.getItem("kt_" + (name !== null ? name + "_" : "") + "theme_mode_value"); if (themeMode === null) { if (defaultThemeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } else { themeMode = defaultThemeMode; } } document.documentElement.setAttribute("data-theme", themeMode); }
@@ -178,17 +178,17 @@
     <!--end::Global Javascript Bundle-->
     <!--begin::Vendors Javascript(used by this page)-->
     <script src="{{asset('assets/plugins/custom/fullcalendar/fullcalendar.bundle.js')}}"></script>
-    <script src="https://cdn.amcharts.com/lib/5/index.js')}}"></script>
-    <script src="https://cdn.amcharts.com/lib/5/xy.js')}}"></script>
-    <script src="https://cdn.amcharts.com/lib/5/percent.js')}}"></script>
-    <script src="https://cdn.amcharts.com/lib/5/radar.js')}}"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js')}}"></script>
-    <script src="https://cdn.amcharts.com/lib/5/map.js')}}"></script>
-    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js')}}"></script>
-    <script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js')}}"></script>
-    <script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js')}}"></script>
-    <script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js')}}"></script>
-    <script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js')}}"></script>
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js"></script>
     <script src="{{asset('assets/plugins/custom/datatables/datatables.bundle.js')}}"></script>
     <!--end::Vendors Javascript-->
     <!--begin::Custom Javascript(used by this page)-->
