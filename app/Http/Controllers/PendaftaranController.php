@@ -14,6 +14,12 @@ class PendaftaranController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         // memanggil data Pendaftaran bersama dengan data siswa

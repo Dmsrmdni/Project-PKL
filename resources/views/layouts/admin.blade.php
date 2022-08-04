@@ -3,12 +3,10 @@
 <!-- =========================================================
 * Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
 ==============================================================
-
 * Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
 * Created by: ThemeSelection
 * License: You must have a valid license purchased in order to legally use the theme for your project.
 * Copyright ThemeSelection (https://themeselection.com)
-
 =========================================================
  -->
 <!-- beautify ignore:start -->
@@ -56,6 +54,8 @@
 
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="{{asset('assets/vendor/fonts/boxicons.css')}}" />
+
+    {{-- <link rel="stylesheet" href="{{ asset('DataTables/datatables.min.css') }}"> --}}
 
     <!-- Core CSS -->
     <link rel="stylesheet" href="{{asset('assets/vendor/css/core.css')}}" class="template-customizer-core-css" />
@@ -200,5 +200,14 @@
     <script src="{{asset('assets/js/custom/utilities/modals/create-app.js')}}"></script>
     <script src="{{asset('assets/js/custom/utilities/modals/new-target.js')}}"></script>
     <script src="{{asset('assets/js/custom/utilities/modals/users-search.js')}}"></script>
+
+    <script src="{{ asset('js/jquery-3.5.1.js') }}"></script>
+    <script src="{{ asset('DataTables/datatables.min.js') }}"></script>
+    {{-- <script src="{{ asset('js/bootstrap.min.js') }}" defer></script> --}}
+    <script>
+      $(document).ready(function() {
+                $('#dataTable').DataTable();
+            });
+    </script>
   </body>
 </html>
