@@ -63,7 +63,7 @@ class EskulController extends Controller
         $eskul->save();
         return redirect()
             ->route('eskul.index')
-            ->with('success', 'Data berhasil di Buat!');
+            ->with('toast_success', 'Data berhasil di Buat!');
 
     }
 
@@ -120,7 +120,7 @@ class EskulController extends Controller
         $eskul->save();
         return redirect()
             ->route('eskul.index')
-            ->with('success', 'Data berhasil di Edit!');
+            ->with('toast_success', 'Data berhasil di Edit!');
     }
 
     /**
@@ -136,7 +136,7 @@ class EskulController extends Controller
         $eskul->delete();
         return redirect()
             ->route('eskul.index')
-            ->with('success', 'Data berhasil di Hapus!');
+            ->with('toast_success', 'Data berhasil di Hapus!');
 
     }
 }

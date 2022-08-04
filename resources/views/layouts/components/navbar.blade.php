@@ -49,12 +49,12 @@
                     </li>
                     <li>
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                    document.getElementById('logout-form').submit();"
-                            role="button"><i class="bx bx-power-off me-2"></i>
+                             document.getElementById('logout-form').submit();" role="button"><i
+                                class="bx bx-power-off me-2"></i>
                             <span class="align-middle">Log Out</span></a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
-                        </form>>
+                        </form>
                         </a>
                     </li>
                 </ul>

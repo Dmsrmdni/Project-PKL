@@ -93,7 +93,7 @@ class PendaftaranController extends Controller
         $pendaftaran->save();
         return redirect()
             ->route('pendaftaran.index')
-            ->with('success', 'Data berhasil dibuat!');
+            ->with('toast_success', 'Data berhasil dibuat!');
     }
 
     public function show($id)
@@ -158,7 +158,7 @@ class PendaftaranController extends Controller
         $pendaftaran->save();
         return redirect()
             ->route('pendaftaran.index')
-            ->with('success', 'Data berhasil dibuat!');
+            ->with('toast_success', 'Data berhasil dibuat!');
     }
 
     public function destroy($id)
@@ -167,6 +167,6 @@ class PendaftaranController extends Controller
         $pendaftaran->delete();
         return redirect()
             ->route('pendaftaran.index')
-            ->with('success', 'Data berhasil dihapus!');
+            ->with('toast_success', 'Data berhasil dihapus!');
     }
 }

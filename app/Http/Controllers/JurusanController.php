@@ -123,7 +123,7 @@ class JurusanController extends Controller
 
         return redirect()
             ->route('jurusan.index')
-            ->with('success', 'Data berhasil di Edit!');
+            ->with('toast_success', 'Data berhasil di Edit!');
     }
 
     /**
@@ -139,7 +139,7 @@ class JurusanController extends Controller
         $jurusan->delete();
         return redirect()
             ->route('jurusan.index')
-            ->with('success', 'Data berhasil di Hapus!');
+            ->with('toast_success', 'Data berhasil di Hapus!');
 
     }
 }

@@ -58,7 +58,7 @@ class GaleriController extends Controller
         $galeri->save();
         return redirect()
             ->route('galeri.index')
-            ->with('success', 'Data berhasil di Buat!');
+            ->with('toast_success', 'Data berhasil di Buat!');
 
     }
 
@@ -112,7 +112,7 @@ class GaleriController extends Controller
 
         return redirect()
             ->route('galeri.index')
-            ->with('success', 'Data berhasil di Edit!');
+            ->with('toast_success', 'Data berhasil di Edit!');
     }
 
     /**
@@ -128,7 +128,7 @@ class GaleriController extends Controller
         $galeri->delete();
         return redirect()
             ->route('galeri.index')
-            ->with('success', 'Data berhasil di Hapus!');
+            ->with('toast_success', 'Data berhasil di Hapus!');
 
     }
 }
