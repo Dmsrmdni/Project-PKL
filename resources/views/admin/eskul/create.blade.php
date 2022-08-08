@@ -15,7 +15,7 @@
             <div class="d-flex flex-column gap-7 gap-lg-10 w-5 w-lg-300px mb-7 me-lg-10">
                 <!--begin::Thumbnail settings-->
 
-                <div class="card card-flush py-4 shadow rounded card">
+                <div class="card card-flush py-4 shadow-lg rounded card">
                     <!--begin::Card header-->
                     <div class="card-header">
                         <!--begin::Card title-->
@@ -92,7 +92,7 @@
             <!--begin::Main column-->
             <div class="d-flex flex-column flex-row-fluid gap-7 gap-lg-10">
                 <!--begin::General options-->
-                <div class="card card-flush py-4 shadow rounded card">
+                <div class="card card-flush py-4 shadow-lg rounded card">
                     <!--begin::Card header-->
                     <div class="card-header">
                         <div class="card-title">
