@@ -47,6 +47,23 @@ class PendaftaranController extends Controller
         return view('admin.pendaftaran.create', compact('jurusan', 'kd'));
     }
 
+    public function create2()
+    {
+        $jurusan = Jurusan::all();
+        $q = DB::table('pendaftarans')->select(DB::raw('MAX(RIGHT(kode_pendaftaran,3)) as kode'));
+        $kd = "";
+        if ($q->count() > 0) {
+            foreach ($q->get() as $k) {
+                $tmp = ((int) $k->kode) + 1;
+                $kd = sprintf("%03s", $tmp);
+            }
+        } else {
+            $kd = "001";
+        }
+
+        return view('user.daftar', compact('jurusan', 'kd'));
+    }
+
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -91,24 +108,65 @@ class PendaftaranController extends Controller
         $pendaftaran->no_hp_yang_bisa_di_hubungi = $request->no_hp_yang_bisa_di_hubungi;
         $pendaftaran->alamat_ortu = $request->alamat_ortu;
         $pendaftaran->save();
-        return redirect()
-            ->route('pendaftaran.index')
-            ->with('toast_success', 'Data berhasil dibuat!');
+        return redirect('/daftar')
+            ->with('toast_success', 'Data berhasil dibuat!')
+            ->with('kode_pendaftaran', $request->kode_pendaftaran)
+            ->with('id_jurusan', $request->id_jurusan)
+            ->with('nama_lengkap', $request->nama_lengkap)
+            ->with('jenis_kelamin', $request->jenis_kelamin)
+            ->with('tempat_lahir', $request->tempat_lahir)
+            ->with('tanggal_lahir', $request->tanggal_lahir)
+            ->with('no_hp_siswa', $request->no_hp_siswa)
+            ->with('email', $request->email)
+            ->with('provinsi', $request->provinsi)
+            ->with('kota', $request->kota)
+            ->with('kecamatan', $request->kecamatan)
+            ->with('desa', $request->desa)
+            ->with('alamat', $request->alamat)
+            ->with('kode_pos', $request->kode_pos)
+            ->with('nama_asal_sekolah', $request->nama_asal_sekolah)
+            ->with('alamat_sekolah', $request->alamat_sekolah)
+            ->with('nama_lengkap_ortu', $request->nama_lengkap_ortu)
+            ->with('pekerjaan', $request->pekerjaan)
+            ->with('no_hp_yang_bisa_di_hubungi', $request->no_hp_yang_bisa_di_hubungi)
+            ->with('alamat_ortu', $request->alamat_ortu);
     }
 
     public function show($id)
     {
         $pendaftaran = Pendaftaran::findOrFail($id);
         $jurusan = Jurusan::all();
+        $q = DB::table('pendaftarans')->select(DB::raw('MAX(RIGHT(kode_pendaftaran,3)) as kode'));
+        $kd = "";
+        if ($q->count() > 0) {
+            foreach ($q->get() as $k) {
+                $tmp = ((int) $k->kode) + 1;
+                $kd = sprintf("%03s", $tmp);
+            }
+        } else {
+            $kd = "001";
+        }
 
-        return view('admin.pendaftaran.show', compact('pendaftaran', 'jurusan'));
+        return view('admin.pendaftaran.show', compact('pendaftaran', 'jurusan', 'kd'));
     }
 
     public function edit($id)
     {
         $pendaftaran = Pendaftaran::findOrFail($id);
         $jurusan = Jurusan::all();
-        return view('admin.pendaftaran.edit', compact('pendaftaran', 'jurusan'));
+
+        $q = DB::table('pendaftarans')->select(DB::raw('MAX(RIGHT(kode_pendaftaran,3)) as kode'));
+        $kd = "";
+        if ($q->count() > 0) {
+            foreach ($q->get() as $k) {
+                $tmp = ((int) $k->kode) + 1;
+                $kd = sprintf("%03s", $tmp);
+            }
+        } else {
+            $kd = "001";
+        }
+
+        return view('admin.pendaftaran.edit', compact('pendaftaran', 'jurusan', 'kd'));
     }
 
     public function update(Request $request, $id)
@@ -158,7 +216,7 @@ class PendaftaranController extends Controller
         $pendaftaran->save();
         return redirect()
             ->route('pendaftaran.index')
-            ->with('toast_success', 'Data berhasil dibuat!');
+            ->with('toast_success', 'Data berhasil diedit!');
     }
 
     public function destroy($id)

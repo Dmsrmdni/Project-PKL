@@ -11,30 +11,32 @@
             enctype="multipart/form-data">
             @csrf
             <!--begin::Aside column-->
-            <div class="d-flex flex-column gap-7 gap-lg-10 w-8 w-lg-300px mb-7 me-lg-10">
+            <div class="d-flex flex-column gap-7 gap-lg-10 w-5 w-lg-300px mb-7 me-lg-10">
                 <!--begin::Thumbnail settings-->
-                <div class="card card-flush py-4">
+
+                <div class="card card-flush py-4 shadow rounded card">
                     <!--begin::Card header-->
                     <div class="card-header">
                         <!--begin::Card title-->
                         <div class="card-title">
-                            <h2>Image</h2>
+                            <h2>Masukan Foto</h2>
                         </div>
                         <!--end::Card title-->
                     </div>
                     <!--end::Card header-->
                     <!--begin::Card body-->
+
                     <div class="card-body text-center pt-0">
                         <!--begin::Image input-->
                         <!--begin::Image input placeholder-->
                         <style>
                             .image-input-placeholder {
-                                background-image: url(' assets/media/svg/files/blank-image.svg');
+                                background-image: url("{{asset('assets/media/svg/files/blank-image.svg')}}");
 
                             }
 
                             [data-theme="dark"] .image-input-placeholder {
-                                background-image: url(' assets/media/svg/files/blank-image-dark.svg');
+                                background-image: url("{{asset('assets/media/svg/files/blank-image-dark.svg')}}");
                             }
                         </style>
                         <!--end::Image input placeholder-->
@@ -42,15 +44,15 @@
                         <div class="image-input image-input-empty image-input-outline image-input-placeholder mb-3"
                             data-kt-image-input="true">
                             <!--begin::Preview existing avatar-->
-                            <div class="image-input-wrapper w-150px h-150px"></div>
+                            <div class="image-input-wrapper w-150px h-150px">
+                            </div>
                             <!--end::Preview existing avatar-->
                             <!--begin::Label-->
                             <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
                                 data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
                                 <!--begin::Icon-->
-                                <i class="bi bi-pencil-fill fs-7"></i>
                                 <!--end::Icon-->
-                                <!--begin::Inputs-->
+                                <i class="bi bi-pencil-fill fs-7"></i>
                                 <input type="file" class="form-control  @error('foto') is-invalid @enderror"
                                     name="foto">
                                 @error('foto')
@@ -58,6 +60,7 @@
                                     <strong>{{ $message }}</strong>
                                 </span>
                                 @enderror
+                                <!--begin::Inputs-->
                                 <!--end::Inputs-->
                             </label>
                             <!--end::Label-->
@@ -80,27 +83,44 @@
                             image files are accepted</div>
                         <!--end::Description-->
                     </div>
-                    <!--end::Card body-->
                 </div>
                 <!--end::Thumbnail settings-->
 
             </div>
             <!--end::Aside column-->
+            <!--begin::Main column-->
             <div class="d-flex flex-column flex-row-fluid gap-7 gap-lg-10">
                 <!--begin::General options-->
-                <div class="card card-flush py-4">
+                <div class="card card-flush py-4 shadow rounded card">
                     <!--begin::Card header-->
                     <div class="card-header">
                         <div class="card-title">
-                            <h2>Data Galeri</h2>
+                            <h2>Data</h2>
+                        </div>
+                    </div>
+                    <!--end::Card header-->
+                    <!--begin::Card body-->
+                    <div class="card-body pt-0">
+                        <!--begin::Input group-->
+                        <div class="mb-10 fv-row">
+                            <label class="required form-label">Keterangan</label>
+                            <input type="text" name="keterangan"
+                                class="form-control mb-2  @error('keterangan') is-invalid @enderror"
+                                placeholder="Nama Jurusan" value="" />
+                            @error('keterangan')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
                     </div>
                     <!--end::Card header-->
                 </div>
                 <!--end::General options-->
+
                 <!--end::Automation-->
                 <div class="d-flex justify-content-end">
-                    <a href="{{route('eskul.index')}}" class="btn btn-danger me-3"><svg
+                    <a href="{{route('galeri.index')}}" class="btn btn-danger me-3"><svg
                             xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor"
                             class="bi bi-skip-backward-fill" viewBox="0 0 16 16">
                             <path

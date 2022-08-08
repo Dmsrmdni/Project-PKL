@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('content')
 
-<div class="card card-flush">
+<div class="card card-flush shadow rounded card">
     <div class="card-header" id="atas">
         @include('sweetalert::alert')
         <a href="{{ route('eskul.create') }}" class="btn btn-sm btn-primary"><svg xmlns="http://www.w3.org/2000/svg"
@@ -16,8 +16,7 @@
                 <thead>
                     <tr>
                         <th>NO</th>
-                        <th>Nama Jurusan</th>
-                        <th>Singkatan</th>
+                        <th>Nama Eskul</th>
                         <th>Foto</th>
                         <th>Actions</th>
                     </tr>
@@ -41,12 +40,6 @@
                         </td>
                         <!--end::Category=-->
                         <!--begin::Type=-->
-                        <td>
-                            <div class="d-flex">
-                                <!--begin::Thumbnail-->
-                                {{ $data->deskripsi}}
-                            </div>
-                        </td>
 
                         <td>
                             <div class="d-flex">

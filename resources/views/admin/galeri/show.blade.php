@@ -10,9 +10,9 @@
         <form class="form d-flex flex-column flex-lg-row" action="{{ route('galeri.update', $galeri->id) }}"
             method="POST" enctype="multipart/form-data">
             <!--begin::Aside column-->
-            <div class="d-flex flex-column gap-7 gap-lg-10 w-8 w-lg-300px mb-7 me-lg-10">
+            <div class="d-flex flex-column gap-7 gap-lg-10 w-4 w-lg-300px mb-7 me-lg-10">
                 <!--begin::Thumbnail settings-->
-                <div class="card card-flush py-4">
+                <div class="card card-flush py-4 shadow rounded card">
                     <!--begin::Card header-->
                     <div class="card-header">
                         <!--begin::Card title-->
@@ -86,12 +86,28 @@
             <!--begin::Main column-->
             <div class="d-flex flex-column flex-row-fluid gap-7 gap-lg-10">
                 <!--begin::General options-->
-                <div class="card card-flush py-4">
+                <div class="card card-flush py-4 shadow rounded card">
                     <!--begin::Card header-->
                     <div class="card-header">
                         <div class="card-title">
-                            <h2>Data Galeri</h2>
+                            <h2>Data</h2>
                         </div>
+                    </div>
+                    <!--end::Card header-->
+                    <!--begin::Card body-->
+                    <div class="card-body pt-0">
+                        <div class="mb-10 fv-row">
+                            <label class="required form-label">Keterangan</label>
+                            <textarea name="keterangan" cols="30" rows="7"
+                                class="form-control mb-2  @error('keterangan') is-invalid @enderror"
+                                disabled>{{$galeri->keterangan}}</textarea>
+                            @error('keterangan')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                        <!--end::Input group-->
                     </div>
                     <!--end::Card header-->
                 </div>
@@ -99,14 +115,12 @@
 
                 <!--end::Automation-->
                 <div class="d-flex justify-content-end">
-                    <!--begin::Button-->
-                    <a href="{{route('eskul.index')}}" class="btn btn-danger me-3"><svg
+                    <a href="{{route('galeri.index')}}" class="btn btn-danger me-3"><svg
                             xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor"
                             class="bi bi-skip-backward-fill" viewBox="0 0 16 16">
                             <path
                                 d="M.5 3.5A.5.5 0 0 0 0 4v8a.5.5 0 0 0 1 0V8.753l6.267 3.636c.54.313 1.233-.066 1.233-.697v-2.94l6.267 3.636c.54.314 1.233-.065 1.233-.696V4.308c0-.63-.693-1.01-1.233-.696L8.5 7.248v-2.94c0-.63-.692-1.01-1.233-.696L1 7.248V4a.5.5 0 0 0-.5-.5z" />
                         </svg> Kembali</a>
-                    <!--end::Button-->
                 </div>
             </div>
             <!--end::Main column-->

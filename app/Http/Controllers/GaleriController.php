@@ -18,6 +18,13 @@ class GaleriController extends Controller
         $this->middleware('auth');
     }
 
+     public function index2()
+    {
+        $galeri = Galeri::all();
+        return view('user.galeri', compact('galeri'));
+    }
+
+
     public function index()
     {
         $galeri = Galeri::all();
@@ -44,7 +51,8 @@ class GaleriController extends Controller
     {
         //validasi
         $validated = $request->validate([
-            'foto' => 'required|unique:galeris|max:255',
+            'foto' => 'required',
+            'keterangan' => 'required',
         ]);
 
         $galeri = new Galeri();
@@ -55,6 +63,7 @@ class GaleriController extends Controller
             $image->move('images/galeri/', $name);
             $galeri->foto = $name;
         }
+        $galeri->keterangan = $request->keterangan;
         $galeri->save();
         return redirect()
             ->route('galeri.index')
@@ -98,6 +107,7 @@ class GaleriController extends Controller
         //validasi
         $validated = $request->validate([
             'foto' => 'required',
+            'keterangan' => 'required',
         ]);
 
         $galeri = Galeri::findOrFail($id);
@@ -108,6 +118,7 @@ class GaleriController extends Controller
             $image->move('images/galeri/', $name);
             $galeri->foto = $name;
         }
+        $galeri->keterangan = $request->keterangan;
         $galeri->save();
 
         return redirect()

@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('content')
 
-<div class="card card-flush">
+<div class="card card-flush shadow rounded card">
     <div class="card-header" id="atas">
         @include('sweetalert::alert')
         <a href="{{ route('galeri.create') }}" class="btn btn-sm btn-primary"><svg xmlns="http://www.w3.org/2000/svg"
@@ -17,6 +17,7 @@
                     <tr>
                         <th>NO</th>
                         <th>Foto</th>
+                        <th>Keterangan</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -36,6 +37,13 @@
                             <div class="d-flex">
                                 <!--begin::Thumbnail-->
                                 <img src="{{ $data->image() }}" style="width: 100px; height:100px;" alt="">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="d-flex">
+                                <!--begin::Thumbnail-->
+                                {{ $data->keterangan}}
                             </div>
                         </td>
                         <!--end::Type=-->

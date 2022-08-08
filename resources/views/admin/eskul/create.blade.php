@@ -11,30 +11,33 @@
             enctype="multipart/form-data">
             @csrf
             <!--begin::Aside column-->
-            <div class="d-flex flex-column gap-7 gap-lg-10 w-4 w-lg-300px mb-7 me-lg-10">
+            <!--begin::Aside column-->
+            <div class="d-flex flex-column gap-7 gap-lg-10 w-5 w-lg-300px mb-7 me-lg-10">
                 <!--begin::Thumbnail settings-->
-                <div class="card card-flush py-4">
+
+                <div class="card card-flush py-4 shadow rounded card">
                     <!--begin::Card header-->
                     <div class="card-header">
                         <!--begin::Card title-->
                         <div class="card-title">
-                            <h2>Image</h2>
+                            <h2>Masukan Foto</h2>
                         </div>
                         <!--end::Card title-->
                     </div>
                     <!--end::Card header-->
                     <!--begin::Card body-->
+
                     <div class="card-body text-center pt-0">
                         <!--begin::Image input-->
                         <!--begin::Image input placeholder-->
                         <style>
                             .image-input-placeholder {
-                                background-image: url(' assets/media/svg/files/blank-image.svg');
+                                background-image: url("{{asset('assets/media/svg/files/blank-image.svg')}}");
 
                             }
 
                             [data-theme="dark"] .image-input-placeholder {
-                                background-image: url(' assets/media/svg/files/blank-image-dark.svg');
+                                background-image: url("{{asset('assets/media/svg/files/blank-image-dark.svg')}}");
                             }
                         </style>
                         <!--end::Image input placeholder-->
@@ -42,15 +45,15 @@
                         <div class="image-input image-input-empty image-input-outline image-input-placeholder mb-3"
                             data-kt-image-input="true">
                             <!--begin::Preview existing avatar-->
-                            <div class="image-input-wrapper w-150px h-150px"></div>
+                            <div class="image-input-wrapper w-150px h-150px">
+                            </div>
                             <!--end::Preview existing avatar-->
                             <!--begin::Label-->
                             <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
                                 data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
                                 <!--begin::Icon-->
-                                <i class="bi bi-pencil-fill fs-7"></i>
                                 <!--end::Icon-->
-                                <!--begin::Inputs-->
+                                <i class="bi bi-pencil-fill fs-7"></i>
                                 <input type="file" class="form-control  @error('foto') is-invalid @enderror"
                                     name="foto">
                                 @error('foto')
@@ -58,6 +61,7 @@
                                     <strong>{{ $message }}</strong>
                                 </span>
                                 @enderror
+                                <!--begin::Inputs-->
                                 <!--end::Inputs-->
                             </label>
                             <!--end::Label-->
@@ -80,7 +84,6 @@
                             image files are accepted</div>
                         <!--end::Description-->
                     </div>
-                    <!--end::Card body-->
                 </div>
                 <!--end::Thumbnail settings-->
 
@@ -89,7 +92,7 @@
             <!--begin::Main column-->
             <div class="d-flex flex-column flex-row-fluid gap-7 gap-lg-10">
                 <!--begin::General options-->
-                <div class="card card-flush py-4">
+                <div class="card card-flush py-4 shadow rounded card">
                     <!--begin::Card header-->
                     <div class="card-header">
                         <div class="card-title">

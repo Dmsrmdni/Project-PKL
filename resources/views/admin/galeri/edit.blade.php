@@ -12,9 +12,9 @@
             @csrf
             @method('put')
             <!--begin::Aside column-->
-            <div class="d-flex flex-column gap-7 gap-lg-10 w-8 w-lg-300px mb-7 me-lg-10">
+            <div class="d-flex flex-column gap-7 gap-lg-10 w-4 w-lg-300px mb-7 me-lg-10">
                 <!--begin::Thumbnail settings-->
-                <div class="card card-flush py-4">
+                <div class="card card-flush py-4 shadow rounded card">
                     <!--begin::Card header-->
                     <div class="card-header">
                         <!--begin::Card title-->
@@ -96,11 +96,27 @@
             <!--begin::Main column-->
             <div class="d-flex flex-column flex-row-fluid gap-7 gap-lg-10">
                 <!--begin::General options-->
-                <div class="card card-flush py-4">
+                <div class="card card-flush py-4 shadow rounded card">
                     <!--begin::Card header-->
                     <div class="card-header">
                         <div class="card-title">
-                            <h2>Data Galeri</h2>
+                            <h2>Data</h2>
+                        </div>
+                    </div>
+                    <!--end::Card header-->
+                    <!--begin::Card body-->
+                    <div class="card-body pt-0">
+                        <!--begin::Input group-->
+                        <div class="mb-10 fv-row">
+                            <label class="required form-label">Deskripsi</label>
+                            <input type="text" name="keterangan"
+                                class="form-control mb-2  @error('keterangan') is-invalid @enderror"
+                                value="{{ $galeri->keterangan }}" />
+                            @error('keterangan')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
                     </div>
                     <!--end::Card header-->
@@ -109,7 +125,7 @@
 
                 <!--end::Automation-->
                 <div class="d-flex justify-content-end">
-                    <a href="{{route('eskul.index')}}" class="btn btn-danger me-3"><svg
+                    <a href="{{route('galeri.index')}}" class="btn btn-danger me-3"><svg
                             xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor"
                             class="bi bi-skip-backward-fill" viewBox="0 0 16 16">
                             <path

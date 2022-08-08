@@ -23,8 +23,30 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function () {
-    return view('beranda');
+    return view('user.beranda');
 });
+Route::get('/', [App\Http\Controllers\JurusanController::class, 'index2']);
+
+Route::get('/eskul', function () {
+    return view('user.eskul');
+});
+
+Route::get('/eskul', [App\Http\Controllers\EskulController::class, 'index2']);
+
+Route::get('/galeri', function () {
+    return view('user.galeri');
+});
+
+Route::get('/galeri', [App\Http\Controllers\GaleriController::class, 'index2']);
+
+// Route::get('/user', function () {
+//     return view('layouts.user');
+// });
+
+Route::get('/daftar', function () {
+    return view('user.daftar');
+});
+Route::get('/daftar', [App\Http\Controllers\PendaftaranController::class, 'create2']);
 
 Auth::routes(['register' => false]); // Mematikan halaman register
 

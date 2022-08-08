@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('content')
-<div class="card card-flush" id="atas">
+<div class="card card-flush shadow rounded card" id="atas">
     <div class="card-header">
         @include('sweetalert::alert')
         <a href="{{ route('pendaftaran.create') }}" class="btn btn-sm btn-primary"><svg

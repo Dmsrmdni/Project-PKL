@@ -72,7 +72,7 @@
             </a>
 
             <ul class="menu-sub">
-                <li class="menu-item">
+                <li class="menu-item {{ request()->is('admin/jurusan') ? 'active' : '' }}">
                     <a href="{{route('jurusan.index')}}" class="menu-link">
                         <div data-i18n="Without menu"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                 fill="currentColor" class="bi bi-subtract" viewBox="0 0 16 16">
@@ -81,7 +81,7 @@
                             </svg> Data Jurusan</div>
                     </a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item {{ request()->is('admin/eskul') ? 'active' : '' }}">
                     <a href="{{route('eskul.index')}}" class="menu-link">
                         <div data-i18n="Without navbar"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                 fill="currentColor" class="bi bi-subtract" viewBox="0 0 16 16">
@@ -90,7 +90,7 @@
                             </svg> Data Eskul</div>
                     </a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item {{ request()->is('admin/galeri') ? 'active' : '' }}">
                     <a href="{{route('galeri.index')}}" class="menu-link">
                         <div data-i18n="Container"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                 fill="currentColor" class="bi bi-subtract" viewBox="0 0 16 16">
@@ -99,7 +99,7 @@
                             </svg> Data Galeri</div>
                     </a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item {{ request()->is('admin/pendaftaran') ? 'active' : '' }}">
                     <a href="{{route('pendaftaran.index')}}" class="menu-link">
                         <div data-i18n="Fluid"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                 fill="currentColor" class="bi bi-subtract" viewBox="0 0 16 16">
