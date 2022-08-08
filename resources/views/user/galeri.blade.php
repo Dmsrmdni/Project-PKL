@@ -54,7 +54,7 @@
 
                 @foreach ($galeri as $data)
                 <div class="col-lg-4 col-md-6 portfolio-item">
-                    <img src="{{ $data->image() }}" style="width: 60%;" class="img-fluid" alt="">
+                    <img src="{{ $data->image() }}" style="width: 60%;" class="img-fluid shadow rounded card" alt="">
                     <div class="portfolio-info" style="width: 55%;">
                         <h4>{{$data->keterangan}}</h4>
                         <a href="{{ $data->image() }}" data-gallery="portfolioGallery"

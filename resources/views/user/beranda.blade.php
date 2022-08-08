@@ -72,7 +72,7 @@
 <main id="main">
     <!-- ======= About Section ======= -->
     <section id="profil" class="about">
-        <div class="container" data-aos="fade-up">
+        <div class="container shadow rounded" data-aos="fade-up">
 
             <div class="row justify-content-end">
                 <div class="col-lg-11">
@@ -188,7 +188,7 @@
 
     <!-- ======= Features Section ======= -->
     <section id="tentang" class="features">
-        <div class="container" data-aos="fade-up">
+        <div class="container shadow rounded" data-aos="fade-up">
             <div class="section-title">
                 <h2 style="font-size: 25px">6 Alasan</h2>
                 <p style="font-size: 20px">Kenapa Harus Sekolah Di SMK ASSALAAM</p>
@@ -617,18 +617,18 @@
             <div data-aos="fade-up" data-aos-delay="200">
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col">
-                        <div class="card h-100">
-                            <img src="{{asset('assets2/img/images/fuso.png')}}" class="card-img-top" alt="...">
+                        <div class="card h-100 shadow rounded">
+                            <img src="{{asset('assets2/img/images/foto1.png')}}" class="card-img-top" alt="...">
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card h-100">
-                            <img src="{{asset('assets2/img/images/fuso.png')}}" class="card-img-top" alt="...">
+                        <div class="card h-100 shadow rounded">
+                            <img src="{{asset('assets2/img/images/foto1.png')}}" class="card-img-top" alt="...">
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card h-100">
-                            <img src="{{asset('assets2/img/images/fuso.png')}}" class="card-img-top" alt="...">
+                        <div class="card h-100 shadow rounded">
+                            <img src="{{asset('assets2/img/images/foto1.png')}}" class="card-img-top" alt="...">
                         </div>
                     </div>
                 </div>

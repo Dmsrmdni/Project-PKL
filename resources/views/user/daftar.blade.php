@@ -219,7 +219,7 @@
             @csrf
             <div class="row">
                 <div class="col-xl">
-                    <div class="card mb-4 shadow rounded card" style="margin: 2%; padding:1% ">
+                    <div class="card mb-4 shadow-lg rounded card" style="margin: 2%; padding:1% ">
                         <div class="card-header d-flex justify-content-between align-items-center">
                             <h4 class="mb-0">Data Diri Calon Pendaftar</h4>
                         </div>
@@ -321,7 +321,7 @@
                 </div>
 
                 <div class="col-xl">
-                    <div class="card mb-4 shadow rounded card" style="margin: 3%; padding:1px ">
+                    <div class="card mb-4 shadow-lg rounded card" style="margin: 3%; padding:1px ">
                         <div class="card-header d-flex justify-content-between align-items-center">
                             <h4 class="mb-0">Alamat Calon Pendaftar</h4>
                         </div>
@@ -402,7 +402,7 @@
 
             <div class="row">
                 <div class="col-xl">
-                    <div class="card mb-4 shadow rounded card" style="margin: 2%; padding:1% ">
+                    <div class="card mb-4 shadow-lg rounded card" style="margin: 2%; padding:1% ">
                         <div class="card-header d-flex justify-content-between align-items-center">
                             <h4 class="mb-0">Data Asal Sekolah</h4>
                         </div>
@@ -460,7 +460,7 @@
                 </div>
 
                 <div class="col-xl">
-                    <div class="card mb-4 shadow rounded card" style="margin: 2%; padding:1% ">
+                    <div class="card mb-4 shadow-lg rounded card" style="margin: 2%; padding:1% ">
                         <div class="card-header d-flex justify-content-between align-items-center">
                             <h4 class="mb-0">Data Orang Tua</h4>
                         </div>

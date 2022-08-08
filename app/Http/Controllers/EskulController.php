@@ -18,11 +18,11 @@ class EskulController extends Controller
         $this->middleware('auth');
     }
 
-    public function index2()
-    {
-        $eskul = Eskul::all();
-        return view('user.eskul', compact('eskul'));
-    }
+    // public function index2()
+    // {
+    //     $eskul = Eskul::all();
+    //     return view('user.eskul', compact('eskul'));
+    // }
 
     public function index()
     {

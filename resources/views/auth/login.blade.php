@@ -44,7 +44,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto">
-                            <div class="card card-plain mt-8">
+                            <div class="card card-plain mt-8 shadow-lg rounded card">
                                 <div class="card-header pb-0 text-left bg-transparent">
                                     <h3 class="font-weight-bolder text-info text-gradient">Selamat Datang</h3>
                                     <p class="mb-0">Masukan Email dan Password</p>

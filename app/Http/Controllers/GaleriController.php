@@ -17,14 +17,6 @@ class GaleriController extends Controller
     {
         $this->middleware('auth');
     }
-
-     public function index2()
-    {
-        $galeri = Galeri::all();
-        return view('user.galeri', compact('galeri'));
-    }
-
-
     public function index()
     {
         $galeri = Galeri::all();

@@ -67,7 +67,7 @@
             <div class="row" data-aos="fade-up" data-aos-delay="200">
                 @foreach ($eskul as $data)
                 <div class="col-md-6 mt-4 mt-md-0">
-                    <div class="card mb-3 shadow rounded card" style="max-width: 540px;">
+                    <div class="card mb-3 shadow-lg rounded card" style="max-width: 540px;">
                         <div class="row g-0">
                             <div class="col-md-4">
                                 <img src="{{ $data->image() }}" style="width: 100%; padding:20px" class="card-img-top

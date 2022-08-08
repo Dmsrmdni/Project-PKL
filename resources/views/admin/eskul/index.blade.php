@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('content')
 
-<div class="card card-flush shadow rounded card">
+<div class="card card-flush shadow-lg rounded card">
     <div class="card-header" id="atas">
         @include('sweetalert::alert')
         <a href="{{ route('eskul.create') }}" class="btn btn-sm btn-primary"><svg xmlns="http://www.w3.org/2000/svg"

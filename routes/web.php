@@ -5,6 +5,7 @@ use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\LaporanPendaftaranController;
 use App\Http\Controllers\PendaftaranController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,19 +26,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('user.beranda');
 });
-Route::get('/', [App\Http\Controllers\JurusanController::class, 'index2']);
+Route::get('/', [App\Http\Controllers\UserController::class, 'jurusan']);
 
 Route::get('/eskul', function () {
     return view('user.eskul');
 });
 
-Route::get('/eskul', [App\Http\Controllers\EskulController::class, 'index2']);
+Route::get('/eskul', [App\Http\Controllers\UserController::class, 'eskul']);
 
 Route::get('/galeri', function () {
     return view('user.galeri');
 });
 
-Route::get('/galeri', [App\Http\Controllers\GaleriController::class, 'index2']);
+Route::get('/galeri', [App\Http\Controllers\UserController::class, 'galeri']);
 
 // Route::get('/user', function () {
 //     return view('layouts.user');

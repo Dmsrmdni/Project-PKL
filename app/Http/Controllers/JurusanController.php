@@ -13,16 +13,16 @@ class JurusanController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
-
-    public function index2()
+    public function __construct()
     {
-        $jurusan = Jurusan::all();
-        return view('user.beranda', compact('jurusan'));
+        $this->middleware('auth');
     }
+
+    // public function index2()
+    // {
+    //     $jurusan = Jurusan::all();
+    //     return view('user.beranda', compact('jurusan'));
+    // }
 
     public function index()
     {
