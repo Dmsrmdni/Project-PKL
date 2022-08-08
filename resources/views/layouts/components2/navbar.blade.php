@@ -1,7 +1,7 @@
 <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-between">
 
-        <h1 class="logo"><a href="#">ASSALAAM</a></h1>
+        <h3 class="logo"><a href="#">SMK ASSALAAM</a></h3>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="logo"><img src="{{asset('assets2/img/logo.png')}}" alt="" class="img-fluid"></a>-->
 
