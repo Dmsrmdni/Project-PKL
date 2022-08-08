@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-xl">
-            <div class="card mb-4 shadow rounded card">
+            <div class="card mb-4 shadow-lg rounded card">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <h5 class="mb-0">Data Diri</h5>
                     <small class="text-muted float-end">Default label</small>
@@ -104,7 +104,7 @@
         </div>
 
         <div class="col-xl">
-            <div class="card mb-4 shadow rounded card">
+            <div class="card mb-4 shadow-lg rounded card">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <h5 class="mb-0">Basic with Icons</h5>
                     <small class="text-muted float-end">Merged input group</small>
@@ -183,7 +183,7 @@
     </div>
     <div class="row">
         <div class="col-xl">
-            <div class="card mb-4 shadow rounded card">
+            <div class="card mb-4 shadow-lg rounded card">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <h5 class="mb-0">Basic Layout</h5>
                     <small class="text-muted float-end">Default label</small>
@@ -224,7 +224,7 @@
         </div>
 
         <div class="col-xl">
-            <div class="card mb-4 shadow rounded card">
+            <div class="card mb-4 shadow-lg rounded card">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <h5 class="mb-0">Basic with Icons</h5>
                     <small class="text-muted float-end">Merged input group</small>
