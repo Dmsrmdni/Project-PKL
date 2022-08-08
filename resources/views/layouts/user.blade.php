@@ -61,7 +61,7 @@
     <script src="{{asset('assets2/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
     <script src="{{asset('assets2/vendor/swiper/swiper-bundle.min.js')}}"></script>
     <script src="{{asset('assets2/vendor/php-email-form/validate.js')}}"></script>
-
+    @include('sweetalert::alert')
     <!-- Template Main JS File -->
     <script src="{{asset('assets2/js/main.js')}}"></script>
 

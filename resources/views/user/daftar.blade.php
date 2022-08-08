@@ -72,7 +72,7 @@
     <!-- Button trigger modal -->
     <div class="container">
         <div class="section-title">
-           <h2 style="font-size: 40px; text-align:center">Daftar Sekarang Juga</h2>
+           <h2 style="font-size: 40px; text-align:center;padding:20px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Daftar Sekarang Juga !!!!</h2>
        </div>
         <br>
         @if (session('nama_lengkap'))

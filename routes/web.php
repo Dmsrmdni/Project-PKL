@@ -38,7 +38,7 @@ Route::get('/galeri', function () {
     return view('user.galeri');
 });
 
-Route::get('/galeri', [App\Http\Controllers\UserController::class, 'galeri']);
+Route::get('/galeri', [App\Http\Controllers\UserController::class, 'index2']);
 
 // Route::get('/user', function () {
 //     return view('layouts.user');
@@ -47,7 +47,8 @@ Route::get('/galeri', [App\Http\Controllers\UserController::class, 'galeri']);
 Route::get('/daftar', function () {
     return view('user.daftar');
 });
-Route::get('/daftar', [App\Http\Controllers\PendaftaranController::class, 'create2']);
+Route::get('/daftar', [App\Http\Controllers\UserController::class, 'create2']);
+Route::post('/cekPendaftaran', [App\Http\Controllers\PendaftaranController::class, 'cekPendaftaran'])->name('cekPendaftaran');
 
 Auth::routes(['register' => false]); // Mematikan halaman register
 
@@ -58,9 +59,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
         return view('admin.index');
     });
     Route::resource('eskul', EskulController::class);
-    Route::resource('jurusan', JurusanController::class);
     Route::resource('galeri', GaleriController::class);
+    Route::resource('jurusan', JurusanController::class);
     Route::resource('pendaftaran', PendaftaranController::class);
-    Route::resource('laporan_pendaftaran', LaporanPendaftaranController::class);
-
 });
