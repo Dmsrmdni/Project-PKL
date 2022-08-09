@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EskulController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\LaporanPendaftaranController;
@@ -23,31 +24,23 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
+Route::get('/',  [App\Http\Controllers\UserController::class, 'jurusan'], function () {
     return view('user.beranda');
 });
-Route::get('/', [App\Http\Controllers\UserController::class, 'jurusan']);
 
-Route::get('/eskul', function () {
+Route::get('/eskul', [App\Http\Controllers\UserController::class, 'eskul'], function () {
     return view('user.eskul');
 });
 
-Route::get('/eskul', [App\Http\Controllers\UserController::class, 'eskul']);
-
-Route::get('/galeri', function () {
+Route::get('/galeri',[App\Http\Controllers\UserController::class, 'galeri'] , function () {
     return view('user.galeri');
 });
 
-Route::get('/galeri', [App\Http\Controllers\UserController::class, 'galeri']);
 
-// Route::get('/user', function () {
-//     return view('layouts.user');
-// });
-
-Route::get('/daftar', function () {
+Route::get('/daftar', [App\Http\Controllers\UserController::class, 'create'] ,function () {
     return view('user.daftar');
 });
-Route::get('/daftar', [App\Http\Controllers\UserController::class, 'create']);
+
 Route::post('/cekPendaftaran', [App\Http\Controllers\PendaftaranController::class, 'cekPendaftaran'])->name('cekPendaftaran');
 
 Auth::routes(['register' => false]); // Mematikan halaman register
@@ -55,7 +48,7 @@ Auth::routes(['register' => false]); // Mematikan halaman register
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
-    Route::get('/', function () {
+    Route::get('/', [App\Http\Controllers\AdminController::class, 'total'], function () {
         return view('admin.index');
     });
     Route::resource('eskul', EskulController::class);

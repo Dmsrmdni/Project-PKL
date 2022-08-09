@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('eskuls', function (Blueprint $table) {
             $table->id();
             $table->string('nama_eskul')->unique();
-            $table->string('deskripsi');
+            $table->text('deskripsi');
             $table->string('foto');
             $table->timestamps();
         });

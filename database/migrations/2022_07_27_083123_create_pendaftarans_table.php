@@ -35,7 +35,7 @@ return new class extends Migration
             $table->text('alamat');
             $table->string('kode_pos');
             $table->string('nama_asal_sekolah');
-            $table->string('alamat_sekolah')->nullable();
+            $table->text('alamat_sekolah')->nullable();
             $table->string('nama_lengkap_ortu');
             $table->string('pekerjaan');
             $table->string('no_hp_yang_bisa_di_hubungi');

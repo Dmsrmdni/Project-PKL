@@ -98,7 +98,7 @@
                                 <div class="count-box">
                                     <i class="bi bi-emoji-smile"></i>
                                     <span data-purecounter-start="0" data-purecounter-end="3000"
-                                        data-purecounter-duration="3" class="purecounter"></span>
+                                        data-purecounter-duration="2" class="purecounter"></span>
                                     <p>Lulusan Terbaik</p>
                                 </div>
                             </div>
@@ -106,7 +106,7 @@
                             <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
                                 <div class="count-box">
                                     <i class="bi bi-journal-richtext"></i>
-                                    <span data-purecounter-start="0" data-purecounter-end="90" data-purecounter-duration="3"
+                                    <span data-purecounter-start="0" data-purecounter-end="90" data-purecounter-duration="2"
                                         class="purecounter"></span>
                                     <p>Telah Bekerja</p>
                                 </div>
@@ -116,7 +116,7 @@
                                 <div class="count-box">
                                     <i class="bi bi-clock"></i>
                                     <span data-purecounter-start="0" data-purecounter-end="100"
-                                        data-purecounter-duration="3" class="purecounter"></span>
+                                        data-purecounter-duration="2" class="purecounter"></span>
                                     <p>Dunia Industri</p>
                                 </div>
                             </div>
@@ -125,7 +125,7 @@
                                 <div class="count-box">
                                     <i class="bi bi-award"></i>
                                     <span data-purecounter-start="0" data-purecounter-end="300"
-                                        data-purecounter-duration="3" class="purecounter"></span>
+                                        data-purecounter-duration="2" class="purecounter"></span>
                                     <p>Kuliah Di PTN</p>
                                 </div>
                             </div>
@@ -269,7 +269,7 @@
                     </li>
                     <li class="nav-item col-2">
                         <a class="nav-link" data-bs-toggle="tab" href="#tab-6">
-                            <i class="bi bi-person-video2"></i>
+                            <i class="bi bi-graph-up"></i>
                             <h4 class="d-none d-lg-block"></h4>
                         </a>
                     </li>

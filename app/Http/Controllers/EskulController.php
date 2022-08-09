@@ -24,6 +24,15 @@ class EskulController extends Controller
     //     return view('user.eskul', compact('eskul'));
     // }
 
+
+    // public function total_eskul()
+    // {
+    //     $eskul = Eskul::all();
+    //     $total_eskul = $eskul->Count();
+    //     return view('admin', compact('total_eskul'));
+    // }
+
+
     public function index()
     {
         $eskul = Eskul::all();
