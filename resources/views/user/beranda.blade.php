@@ -34,7 +34,7 @@
                                     alt="">
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Kembali</button>
                             </div>
                         </div>
                     </div>
@@ -69,8 +69,8 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="submit" class="btn btn-primary">Send message</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Kembali</button>
+                                    <button type="submit" class="btn btn-primary">Kirim</button>
                                 </div>
                             </form>
                         </div>
@@ -239,37 +239,37 @@
                 <ul class="nav nav-tabs row d-flex">
                     <li class="nav-item col-2">
                         <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
-                            <i class="bi bi-1-circle w-20"></i>
+                           <i class="bi bi-trophy"></i>
                             <h4 class="d-none d-lg-block"></h4>
                         </a>
                     </li>
                     <li class="nav-item col-2">
                         <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
-                            <i class="bi bi-2-circle w-20"></i>
+                           <i class="bi bi-clipboard2-data"></i>
                             <h4 class="d-none d-lg-block"></h4>
                         </a>
                     </li>
                     <li class="nav-item col-2">
                         <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
-                            <i class="bi bi-3-circle w-20"></i>
+                           <i class="bi bi-building"></i>
                             <h4 class="d-none d-lg-block"></h4>
                         </a>
                     </li>
                     <li class="nav-item col-2">
                         <a class="nav-link" data-bs-toggle="tab" href="#tab-4">
-                            <i class="bi bi-4-circle w-30"></i>
+                            <i class="bi bi-person-video2"></i>
                             <h4 class="d-none d-lg-block"></h4>
                         </a>
                     </li>
                     <li class="nav-item col-2">
                         <a class="nav-link" data-bs-toggle="tab" href="#tab-5">
-                            <i class="bi bi-5-circle w-20"></i>
+                           <i class="bi bi-bank"></i>
                             <h4 class="d-none d-lg-block"></h4>
                         </a>
                     </li>
                     <li class="nav-item col-2">
                         <a class="nav-link" data-bs-toggle="tab" href="#tab-6">
-                            <i class="bi bi-6-circle"></i>
+                            <i class="bi bi-person-video2"></i>
                             <h4 class="d-none d-lg-block"></h4>
                         </a>
                     </li>
@@ -298,7 +298,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 order-1 order-lg-2 text-center">
-                                <img src="{{ asset('assets2/img/images/mozila.png') }}" alt=""
+                                <img src="{{ asset('assets2/img/features-1.png') }}" alt=""
                                     class="img-fluid">
                             </div>
                         </div>
@@ -316,7 +316,7 @@
                                 </p>
                             </div>
                             <div class="col-lg-6 order-1 order-lg-2 text-center">
-                                <img src="assets/img/features-2.png" alt="" class="img-fluid">
+                                <img src="{{ asset('assets2/img/features-2.png') }}" alt="" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -334,7 +334,7 @@
                                 </p>
                             </div>
                             <div class="col-lg-6 order-1 order-lg-2 text-center">
-                                <img src="assets/img/features-3.png" alt="" class="img-fluid">
+                                <img src="{{ asset('assets2/img/features-3.png') }}" alt="" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -350,7 +350,7 @@
                                 </p>
                             </div>
                             <div class="col-lg-6 order-1 order-lg-2 text-center">
-                                <img src="assets/img/features-4.png" alt="" class="img-fluid">
+                               <img src="{{ asset('assets2/img/features-4.png') }}" alt="" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -368,7 +368,7 @@
                                 </p>
                             </div>
                             <div class="col-lg-6 order-1 order-lg-2 text-center">
-                                <img src="assets/img/features-4.png" alt="" class="img-fluid">
+                               <img src="{{ asset('assets2/img/features-7.png') }}" alt="" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -382,7 +382,7 @@
                                 </p>
                             </div>
                             <div class="col-lg-6 order-1 order-lg-2 text-center">
-                                <img src="assets/img/features-4.png" alt="" class="img-fluid">
+                                <img src="{{ asset('assets2/img/features-5.png') }}" alt="" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -406,7 +406,7 @@
                                 <img src="{{ $data->image() }}" style="width: 75%; padding:20px"
                                     class="card-img-top mx-auto" alt="...">
                                 <div class="card-icon">
-                                    <i class="ri-brush-4-line"></i>
+                                    <i class="bi bi-pin"></i>
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title"><a href="">{{ $data->nama_jurusan }}</a></h5>
@@ -453,11 +453,14 @@
                             <p> Kegiatan ekstrakurikuler juga memberikan manfaat sosial yang besar.
                             </P>
 
-                            <a href="{{ url('/eskul') }}" class="btn btn-primary" style="color:white">Lihat
+                            <a href="{{ url('/eskul') }}" class="btn btn-primary" style="color:white"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                            </svg> Lihat
                                 Selengkapnya</a>
                             <a href="https://youtu.be/nCsjw4XNr-Q" class="glightbox btn-watch-video btn btn-info"><i
-                                    class="bi bi-play-circle"></i><span> Watch
-                                    Video</span></a>
+                                    class="bi bi-play-circle"></i><span> Lihat Vidio</span></a>
                         </div>
 
                     </div>
@@ -489,8 +492,7 @@
                                 <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                    <a href="https://www.instagram.com/agus.riyadi.9210/?hl=en"><i class="bi bi-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -508,8 +510,7 @@
                                 <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                    <a href="https://www.instagram.com/utejulikurnia/?hl=en"><i class="bi bi-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -527,8 +528,7 @@
                                 <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                    <a href="https://www.instagram.com/alamsahcevi/?hl=en"><i class="bi bi-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -672,29 +672,28 @@
                     <div class="row row-cols-1 row-cols-md-3 g-4">
                         <div class="col">
                             <div class="card h-100 shadow-lg rounded">
-                                <img src="{{ asset('assets2/img/images/foto1.png') }}" class="card-img-top"
+                                <img src="{{ asset('assets2/img/images/profil.jpg') }}" class="card-img-top"
                                     alt="...">
                             </div>
                         </div>
                         <div class="col">
                             <div class="card h-100 shadow-lg rounded">
-                                <img src="{{ asset('assets2/img/images/foto1.png') }}" class="card-img-top"
-                                    alt="...">
+                               <img src="{{ asset('assets2/img/images/fotosmk1.jpg') }}" class="card-img-top" alt="...">
                             </div>
                         </div>
                         <div class="col">
                             <div class="card h-100 shadow-lg rounded">
-                                <img src="{{ asset('assets2/img/images/foto1.png') }}" class="card-img-top"
-                                    alt="...">
+                              <img src="{{ asset('assets2/img/images/fotosmk2.jpg') }}" class="card-img-top" alt="...">
                             </div>
                         </div>
                     </div>
                 </div>
                 <br>
-                <a href="{{ url('/galeri') }}" class="btn btn-primary" style="color:white">Lihat Selengkapnya</a>
+                <a href="{{ url('/galeri') }}" class="btn btn-primary" style="color:white"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg> Lihat Selengkapnya</a>
                 <a href="https://youtu.be/nCsjw4XNr-Q" class="glightbox btn-watch-video btn btn-info"><i
-                        class="bi bi-play-circle"></i><span> Watch
-                        Video</span></a>
+                        class="bi bi-play-circle"></i><span> Lihat Vidio</span></a>
             </div>
         </section><!-- End Services Section -->
 

@@ -38,7 +38,7 @@ Route::get('/galeri', function () {
     return view('user.galeri');
 });
 
-Route::get('/galeri', [App\Http\Controllers\UserController::class, 'index2']);
+Route::get('/galeri', [App\Http\Controllers\UserController::class, 'galeri']);
 
 // Route::get('/user', function () {
 //     return view('layouts.user');
