@@ -47,7 +47,6 @@
                             <div class="card card-plain mt-8 shadow-lg rounded card">
                                 <div class="card-header pb-0 text-left bg-transparent">
                                     <h3 class="font-weight-bolder text-info text-gradient">Selamat Datang</h3>
-                                    <p class="mb-0">Masukan Email dan Password</p>
                                 </div>
                                 <div class="card-body">
                                     <form role="form" action="{{route('login') }}" method="POST">
@@ -91,7 +90,7 @@
                         <div class="col-md-6">
                             <div class="oblique position-absolute top-0 h-100 d-md-block d-none me-n8">
                                 <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6"
-                                    style="background-image:url('{{asset('assets/img/curved-images/curved6.jpg')}}')">
+                                    style="background-image:url('{{asset('assets2/img/images/bg.jpg')}}')">
                                 </div>
                             </div>
                         </div>
@@ -104,41 +103,18 @@
     <footer class="footer py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 mb-4 mx-auto text-center">
-                    <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                        Company
-                    </a>
-                    <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                        About Us
-                    </a>
-                    <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                        Team
-                    </a>
-                    <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                        Products
-                    </a>
-                    <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                        Blog
-                    </a>
-                    <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                        Pricing
-                    </a>
-                </div>
                 <div class="col-lg-8 mx-auto text-center mb-4 mt-2">
-                    <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
-                        <span class="text-lg fab fa-dribbble"></span>
-                    </a>
                     <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
                         <span class="text-lg fab fa-twitter"></span>
                     </a>
-                    <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
+                    <a href="https://www.instagram.com/smkassalaam/?hl=en" target="_blank" class="text-secondary me-xl-4 me-4">
                         <span class="text-lg fab fa-instagram"></span>
                     </a>
                     <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
-                        <span class="text-lg fab fa-pinterest"></span>
+                        <span class="text-lg fab fa-github"></span>
                     </a>
                     <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
-                        <span class="text-lg fab fa-github"></span>
+                        <span class="text-lg fab fa-facebook"></span>
                     </a>
                 </div>
             </div>
@@ -147,7 +123,7 @@
                     <p class="mb-0 text-secondary">
                         Copyright © <script>
                             document.write(new Date().getFullYear())
-                        </script> Soft by Creative Tim.
+                        </script> SMK ASSALAAM BANDUNG
                     </p>
                 </div>
             </div>
