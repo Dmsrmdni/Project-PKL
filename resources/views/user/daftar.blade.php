@@ -294,7 +294,7 @@
 
                             <div class="mb-3">
                                 <label class="required form-label">No HP</label>
-                                <input type="text" name="no_hp_siswa"
+                                <input type="number" name="no_hp_siswa"
                                     class="form-control mb-2  @error('no_hp_siswa') is-invalid @enderror"
                                     placeholder="No Hp Siswa" value="" />
                                 @error('no_hp_siswa')
@@ -492,7 +492,7 @@
                             </div>
                             <div class="mb-3">
                                 <label class="required form-label">No HP Yang Bisa Di hubungi</label>
-                                <input type="text" name="no_hp_yang_bisa_di_hubungi"
+                                <input type="number" name="no_hp_yang_bisa_di_hubungi"
                                     class="form-control mb-2  @error('no_hp_yang_bisa_di_hubungi') is-invalid @enderror"
                                     placeholder="No HP Yang Bisa Di Hubungi" value="" />
                                 @error('no_hp_yang_bisa_di_hubungi')
