@@ -17,7 +17,11 @@
                             Halaman Admin
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Home</a></li>
+                            <li><a class="dropdown-item" href="{{route('home')}}">Beranda</a></li>
+                            <li><a class="dropdown-item" href="{{route('jurusan.index')}}">Jurusan</a></li>
+                            <li><a class="dropdown-item" href="{{route('eskul.index')}}">Eskul</a></li>
+                            <li><a class="dropdown-item" href="{{route('galeri.index')}}">Galeri</a></li>
+                            <li><a class="dropdown-item" href="{{route('pendaftaran.index')}}">Pendaftaran</a></li>
                         </ul>
                     </li>
                 </ul>
