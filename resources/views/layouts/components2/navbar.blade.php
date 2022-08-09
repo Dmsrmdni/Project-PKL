@@ -13,6 +13,7 @@
                 <li><a class="nav-link scrollto" href="#jurusan">Jurusan</a></li>
                 <li><a class="nav-link scrollto " href="#eskul">Eskul</a></li>
                 <li><a class="nav-link scrollto" href="#lainnya">Lainnya</a></li>
+                <li><a class="getstarted scrollto" href="{{url('/daftar')}}">Daftar Sekarang</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->

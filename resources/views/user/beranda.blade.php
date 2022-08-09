@@ -219,7 +219,7 @@
         <!-- ======= Features Section ======= -->
         <section id="tentang" class="features">
             <div class="container shadow-lg rounded" data-aos="fade-up">
-                <div class="section-title">
+                <div class="section-title" style="padding: 20px">
                     <h2 style="font-size: 25px">6 Alasan</h2>
                     <p style="font-size: 20px">Kenapa Harus Sekolah Di SMK ASSALAAM</p>
                 </div>
@@ -389,7 +389,7 @@
                     @foreach ($jurusan as $data)
                         <div class="col-lg-4 col-md-6 d-flex align-items-stretch d-flex justify-content-center"
                             data-aos="fade-up" data-aos-delay="100">
-                            <div class="card shadow rounded card">
+                            <div class="card shadow-lg rounded card">
                                 <img src="{{ $data->image() }}" style="width: 75%; padding:20px"
                                     class="card-img-top mx-auto" alt="...">
                                 <div class="card-icon">
@@ -466,11 +466,11 @@
 
                     <div class="col-lg-4 col-md-6">
                         <div class="member" data-aos="fade-up" data-aos-delay="100">
-                            <div class="pic"><img class="shadow rounded card"
+                            <div class="pic"><img class="shadow-lg rounded card"
                                     src="{{ asset('assets2/img/images/kaprog_tsm.jpg') }}" style="width: 90%"
                                     class="img-fluid" alt="">
                             </div>
-                            <div class="member-info  shadow rounded card">
+                            <div class="member-info  shadow-lg rounded card">
                                 <h4>Agus Riyadi</h4>
                                 <span>KAPROG TSM</span>
                                 <div class="social">
@@ -485,11 +485,11 @@
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="member">
-                            <div class="pic"><img class="shadow rounded card"
+                            <div class="pic"><img class="shadow-lg rounded card"
                                     src="{{ asset('assets2/img/images/kaprog_rpl.jpg') }}" style="width: 90%"
                                     class="img-fluid" alt="">
                             </div>
-                            <div class="member-info  shadow rounded card">
+                            <div class="member-info  shadow-lg rounded card">
                                 <h4>Ute Juli Kurnia, S.T.</h4>
                                 <span>KAPROG RPL</span>
                                 <div class="social">
@@ -504,11 +504,11 @@
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="member">
-                            <div class="pic"><img class="shadow rounded card"
+                            <div class="pic"><img class="shadow-lg rounded card"
                                     src="{{ asset('assets2/img/images/kaprog_tkro.jpg') }}" style="width: 90%"
                                     class="img-fluid" alt="">
                             </div>
-                            <div class="member-info  shadow rounded card">
+                            <div class="member-info  shadow-lg rounded card">
                                 <h4>Cevi Noor Alamsah, A.Md</h4>
                                 <span>KAPROG TKRO</span>
                                 <div class="social">
@@ -658,19 +658,19 @@
                 <div data-aos="fade-up" data-aos-delay="200">
                     <div class="row row-cols-1 row-cols-md-3 g-4">
                         <div class="col">
-                            <div class="card h-100 shadow rounded">
+                            <div class="card h-100 shadow-lg rounded">
                                 <img src="{{ asset('assets2/img/images/foto1.png') }}" class="card-img-top"
                                     alt="...">
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card h-100 shadow rounded">
+                            <div class="card h-100 shadow-lg rounded">
                                 <img src="{{ asset('assets2/img/images/foto1.png') }}" class="card-img-top"
                                     alt="...">
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card h-100 shadow rounded">
+                            <div class="card h-100 shadow-lg rounded">
                                 <img src="{{ asset('assets2/img/images/foto1.png') }}" class="card-img-top"
                                     alt="...">
                             </div>
