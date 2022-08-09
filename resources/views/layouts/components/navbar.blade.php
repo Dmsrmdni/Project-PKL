@@ -14,15 +14,30 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Menu
+                            Halaman Admin
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#">Home</a></li>
                         </ul>
                     </li>
                 </ul>
+                <div style="padding: 20px">
+                <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
+                    <span class="text-lg fab fa-twitter"></span>
+                </a>
+                <a href="https://www.instagram.com/smkassalaam/?hl=en" target="_blank" class="text-secondary me-xl-4 me-4">
+                    <span class="text-lg fab fa-instagram"></span>
+                </a>
+                <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
+                    <span class="text-lg fab fa-github"></span>
+                </a>
+                <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
+                    <span class="text-lg fab fa-facebook"></span>
+                </a>
+                </div>
             </div>
         </div>
+
         <!-- /Search -->
 
         <ul class="navbar-nav flex-row align-items-center ms-auto">
