@@ -6,10 +6,18 @@
             <h1>SMK ASSALAAM BANDUNG</h1>
             <h2>Sekolah Pusat Keunggulan Berbasis Industri</h2>
             <div class="d-flex">
-                <a href="{{ url('/daftar') }}" class="btn-get-started scrollto mx-3" data-aos="fade-up">Daftar Sekarang</a>
+                <a href="{{ url('/daftar') }}" class="btn-get-started scrollto mx-3" data-aos="fade-up"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-square"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.5 2.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
+                </svg>&nbsp; Daftar Sekarang</a>
                 {{-- ALUR ppdb --}}
                 <button type="button" class="btn-get-started scrollto mx-3" data-aos="fade-up" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
+                    data-bs-target="#exampleModal"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-diagram-3-fill"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5v-1zm-6 8A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5v-1zm6 0A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5v-1zm6 0a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1z" />
+                    </svg> &nbsp;
                     Alur PPDB
                 </button>
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -34,7 +42,12 @@
                 {{-- END ALUR ppdb --}}
                 {{-- STATUS PENDAFTARN --}}
                 <button type="submit" class="btn btn-primary btn-get-started scrollto mx-3" data-aos="fade-up"
-                    data-bs-toggle="modal" data-bs-target="#cekdata">Cek Status
+                    data-bs-toggle="modal" data-bs-target="#cekdata"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-square"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5H3z" />
+                        <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z" />
+                    </svg> &nbsp; Cek Status
                     Pendaftaran</button>
                 <div class="modal fade" id="cekdata" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
