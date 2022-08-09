@@ -239,7 +239,7 @@
                 <ul class="nav nav-tabs row d-flex">
                     <li class="nav-item col-2">
                         <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
-                           <i class="bi bi-trophy"></i>
+                           <i class="bi bi-award"></i>
                             <h4 class="d-none d-lg-block"></h4>
                         </a>
                     </li>
