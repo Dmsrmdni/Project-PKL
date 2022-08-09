@@ -7,7 +7,7 @@
         <div class="col-xl">
             <div class="card mb-4 shadow-lg rounded card">
                 <div class="card-header d-flex justify-content-between align-items-center">
-                    <h5 class="mb-0">Data Diri</h5>
+                    <h5 class="mb-0">Data Diri Calon Pendaftar</h5>
                     <small class="text-muted float-end">Default label</small>
                 </div>
                 <div class="card-body">
@@ -106,8 +106,7 @@
         <div class="col-xl">
             <div class="card mb-4 shadow-lg rounded card">
                 <div class="card-header d-flex justify-content-between align-items-center">
-                    <h5 class="mb-0">Basic with Icons</h5>
-                    <small class="text-muted float-end">Merged input group</small>
+                    <h5 class="mb-0">Alamat Calon Pendaftar</h5>
                 </div>
                 <div class="card-body">
                     <div class="mb-3">
@@ -185,8 +184,7 @@
         <div class="col-xl">
             <div class="card mb-4 shadow-lg rounded card">
                 <div class="card-header d-flex justify-content-between align-items-center">
-                    <h5 class="mb-0">Basic Layout</h5>
-                    <small class="text-muted float-end">Default label</small>
+                    <h5 class="mb-0">Data Asal Sekolah</h5>
                 </div>
                 <div class="card-body">
                     <div class="mb-3">
@@ -226,7 +224,7 @@
         <div class="col-xl">
             <div class="card mb-4 shadow-lg rounded card">
                 <div class="card-header d-flex justify-content-between align-items-center">
-                    <h5 class="mb-0">Basic with Icons</h5>
+                    <h5 class="mb-0">Data Orang Tua</h5>
                     <small class="text-muted float-end">Merged input group</small>
                 </div>
                 <div class="card-body">

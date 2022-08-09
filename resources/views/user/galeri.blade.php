@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Dewi Bootstrap Template - Index</title>
+    <title>SMK ASSALAAM BANDUNG</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -64,7 +64,7 @@
                 </div>
                 @endforeach
             </div>
-
+                <a href="{{url('/')}}" class="btn btn-info"><i class="bi bi-play-circle"></i><span> Kembali</span></a>
         </div>
     </section><!-- End Portfolio Section -->
     <div id="preloader"></div>

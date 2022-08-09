@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Dewi Bootstrap Template - Index</title>
+    <title>SMK ASSALAAM BANDUNG</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -70,7 +70,7 @@
                     <div class="card mb-3 shadow-lg rounded card" style="max-width: 540px;">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="{{ $data->image() }}" style="width: 100%; padding:20px" class="card-img-top
+                                <img src="{{ $data->image() }}" style="width: 100%; padding:15px; margin:30px" class="card-img-top
                                 mx-auto">
                             </div>
                             <div class="col-md-8">
