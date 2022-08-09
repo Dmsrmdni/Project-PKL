@@ -30,7 +30,18 @@ class UserController extends Controller
         return view('user.galeri', compact('galeri'));
     }
 
-     public function create2()
+
+     public function index()
+    {
+        // memanggil data Pendaftaran bersama dengan data siswa
+        // yang dibuat dari method 'siswa' di model 'Pendaftaran'
+        $pendaftaran = Pendaftaran::with('jurusan')->get();
+        // dd($pendaftaran);
+        // return $pendaftaran;
+        return view('admin.pendaftaran.index', ['pendaftaran' => $pendaftaran]);
+    }
+
+    public function create()
     {
         $jurusan = Jurusan::all();
         $q = DB::table('pendaftarans')->select(DB::raw('MAX(RIGHT(kode_pendaftaran,3)) as kode'));
@@ -47,7 +58,7 @@ class UserController extends Controller
         return view('user.daftar', compact('jurusan', 'kd'));
     }
 
-    public function store(Request $request)
+      public function store(Request $request)
     {
         $validated = $request->validate([
             'id_jurusan' => 'required',
@@ -114,6 +125,4 @@ class UserController extends Controller
             ->with('no_hp_yang_bisa_di_hubungi', $request->no_hp_yang_bisa_di_hubungi)
             ->with('alamat_ortu', $request->alamat_ortu);
     }
-
-
 }

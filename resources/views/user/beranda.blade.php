@@ -218,7 +218,7 @@
 
         <!-- ======= Features Section ======= -->
         <section id="tentang" class="features">
-            <div class="container shadow rounded" data-aos="fade-up">
+            <div class="container shadow-lg rounded" data-aos="fade-up">
                 <div class="section-title">
                     <h2 style="font-size: 25px">6 Alasan</h2>
                     <p style="font-size: 20px">Kenapa Harus Sekolah Di SMK ASSALAAM</p>

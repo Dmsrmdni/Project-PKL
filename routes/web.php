@@ -47,7 +47,7 @@ Route::get('/galeri', [App\Http\Controllers\UserController::class, 'index2']);
 Route::get('/daftar', function () {
     return view('user.daftar');
 });
-Route::get('/daftar', [App\Http\Controllers\UserController::class, 'create2']);
+Route::get('/daftar', [App\Http\Controllers\UserController::class, 'create']);
 Route::post('/cekPendaftaran', [App\Http\Controllers\PendaftaranController::class, 'cekPendaftaran'])->name('cekPendaftaran');
 
 Auth::routes(['register' => false]); // Mematikan halaman register
@@ -60,6 +60,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     });
     Route::resource('eskul', EskulController::class);
     Route::resource('galeri', GaleriController::class);
-    Route::resource('jurusan', JurusanController::class);
-    Route::resource('pendaftaran', PendaftaranController::class);
 });
+Route::resource('jurusan', JurusanController::class);
+Route::resource('pendaftaran', PendaftaranController::class);
